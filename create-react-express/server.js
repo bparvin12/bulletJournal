@@ -20,5 +20,5 @@ app.get("*", (req, res) => {
 });
 
 app.listen(PORT, () => {
-  console.log(`🌎 ==> Server now on port ${PORT}!`);
+  console.log(`🌎 ==> Server now on port https://localhost:${PORT}!`);
 });
