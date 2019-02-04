@@ -164,12 +164,7 @@ class MiniDrawer extends React.Component {
         </Drawer>
         <main className={classes.content}>
           <div className={classes.toolbar} />
-          <Typography paragraph>
-            NAVBAR IS IN THERE...WORKING ON MAKING IT VISIBLE
-          </Typography>
-          <Typography paragraph>
-            QUEUE THE BUTLER! HOW MAY I BE OF SERVICE?
-          </Typography>
+          {this.props.children}
         </main>
       </div>
     );

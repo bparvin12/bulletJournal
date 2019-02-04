@@ -31,17 +31,13 @@ import Menu from "./components/Menu";
 
 const App = () => (
   <Router>
-    <div>
-        <Nav />
-        <div>
-        <Menu />
-        <Route exact path="/" component={Home} />
-        <Route exact path="/finance" component={Finance} />
-        <Route exact path="/goals" component={Goals} />
-        <Route exact path="/health" component={Health} />
-        <Route exact path="/weather" component={Weather} />
-       </div>
-    </div>
+    <Menu>
+      <Route exact path="/" component={Home} />
+      <Route exact path="/finance" component={Finance} />
+      <Route exact path="/goals" component={Goals} />
+      <Route exact path="/health" component={Health} />
+      <Route exact path="/weather" component={Weather} />
+    </Menu>
   </Router>
 );
 
