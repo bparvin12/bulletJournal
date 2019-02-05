@@ -16,9 +16,12 @@ import AccountCircle from '@material-ui/icons/AccountCircle';
 import MailIcon from '@material-ui/icons/Mail';
 import NotificationsIcon from '@material-ui/icons/Notifications';
 import MoreIcon from '@material-ui/icons/MoreVert';
+
+
 // import WeatherContainer from "../Weather";
 // import Grid from '@material-ui/core/Grid'
 import WeatherWidget from '../WeatherWidget';
+
 
 const styles = theme => ({
   root: {
@@ -187,6 +190,9 @@ class PrimarySearchAppBar extends React.Component {
                 }}
               />
             </div>
+
+            <div className={classes.grow} />
+            <div className={classes.sectionDesktop}>
             <div className={classes.grow}>
               <WeatherWidget />
             </div>
@@ -218,5 +224,6 @@ class PrimarySearchAppBar extends React.Component {
 PrimarySearchAppBar.propTypes = {
   classes: PropTypes.object.isRequired,
 };
+
 
 export default withStyles(styles)(PrimarySearchAppBar);
