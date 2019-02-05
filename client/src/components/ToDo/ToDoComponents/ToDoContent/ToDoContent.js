@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 // import { withStyles } from '@material-ui/core/styles';
 import CardContent from '@material-ui/core/CardContent';
 import "./ToDoContent.css";
+import ToDoTask from "../ToDoTask";
 
 
 
@@ -16,7 +17,7 @@ const ToDoContent = props => {
 
         <CardContent>
 
-            CONTENT
+            <ToDoTask />
     </CardContent>
     );
 
