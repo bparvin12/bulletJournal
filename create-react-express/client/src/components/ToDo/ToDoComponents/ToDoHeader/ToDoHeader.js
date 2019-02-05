@@ -23,7 +23,7 @@ const ToDoHeader = () => (
                     To Do: 
                 </Typography>
                 <div>
-                    <Icon color="inherit" align="right">
+                    <Icon color="inherit">
                         <i class="material-icons">add</i>
                     </Icon>
                     <Icon color="inherit">
