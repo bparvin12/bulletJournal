@@ -12,7 +12,7 @@ class App extends Component {
       <div>
         <PrimarySearchAppBar />
         {/* <Nav /> */}
-        <ToDo />
+        {/* <ToDo /> */}
       </div>
     );
   }
