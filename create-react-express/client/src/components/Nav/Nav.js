@@ -17,6 +17,12 @@ import MailIcon from '@material-ui/icons/Mail';
 import NotificationsIcon from '@material-ui/icons/Notifications';
 import MoreIcon from '@material-ui/icons/MoreVert';
 
+
+// import WeatherContainer from "../Weather";
+// import Grid from '@material-ui/core/Grid'
+import WeatherWidget from '../WeatherWidget';
+
+
 const styles = theme => ({
   root: {
     width: '100%',
@@ -170,7 +176,7 @@ class PrimarySearchAppBar extends React.Component {
               <MenuIcon />
             </IconButton>
             <Typography className={classes.title} variant="h6" color="inherit" noWrap>
-              "Q" the Butler
+              Queue The Butler
             </Typography>
             <div className={classes.search}>
               <div className={classes.searchIcon}>
@@ -184,18 +190,14 @@ class PrimarySearchAppBar extends React.Component {
                 }}
               />
             </div>
+
             <div className={classes.grow} />
             <div className={classes.sectionDesktop}>
-              <IconButton color="inherit">
-                <Badge badgeContent={4} color="secondary">
-                  <MailIcon />
-                </Badge>
-              </IconButton>
-              <IconButton color="inherit">
-                <Badge badgeContent={17} color="secondary">
-                  <NotificationsIcon />
-                </Badge>
-              </IconButton>
+            <div className={classes.grow}>
+              <WeatherWidget />
+            </div>
+            <div className={classes.grow} />
+            <div className={classes.sectionDesktop}>
               <IconButton
                 aria-owns={isMenuOpen ? 'material-appbar' : undefined}
                 aria-haspopup="true"
@@ -222,5 +224,6 @@ class PrimarySearchAppBar extends React.Component {
 PrimarySearchAppBar.propTypes = {
   classes: PropTypes.object.isRequired,
 };
+
 
 export default withStyles(styles)(PrimarySearchAppBar);
