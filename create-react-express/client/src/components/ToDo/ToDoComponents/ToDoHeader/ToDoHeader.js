@@ -20,7 +20,7 @@ const ToDoHeader = () => (
             <Toolbar>
 
                 <Typography variant="h6" color="inherit" className="toDoHeader-Title">
-                    To Do: 
+                    To Do List:
                 </Typography>
                 <div>
                     <Icon color="inherit">
