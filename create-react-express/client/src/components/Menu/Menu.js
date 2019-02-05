@@ -18,6 +18,7 @@ import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
 import InboxIcon from '@material-ui/icons/MoveToInbox';
 import MailIcon from '@material-ui/icons/Mail';
+import PrimarySearchAppBar from "../Nav"
 
 const drawerWidth = 240;
 
@@ -119,9 +120,6 @@ class MiniDrawer extends React.Component {
             >
               <MenuIcon />
             </IconButton>
-            <Typography variant="h6" color="inherit" noWrap>
-              Mini variant drawer
-            </Typography>
           </Toolbar>
         </AppBar>
         <Drawer

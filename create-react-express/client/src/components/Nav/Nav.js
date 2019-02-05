@@ -170,11 +170,6 @@ class PrimarySearchAppBar extends React.Component {
 
     return (
       <div className={classes.root}>
-        <AppBar position="static">
-          <Toolbar>
-            <IconButton className={classes.menuButton} color="inherit" aria-label="Open drawer">
-              <MenuIcon />
-            </IconButton>
             <Typography className={classes.title} variant="h6" color="inherit" noWrap>
               Queue The Butler
             </Typography>
@@ -209,8 +204,6 @@ class PrimarySearchAppBar extends React.Component {
                 <MoreIcon />
               </IconButton>
             </div>
-          </Toolbar>
-        </AppBar>
         {renderMenu}
         {renderMobileMenu}
       </div>
