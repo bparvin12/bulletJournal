@@ -18,7 +18,7 @@ const ToDoContent = props => {
         <CardContent>
 
             <ToDoTask />
-    </CardContent>
+        </CardContent>
     );
 
 }

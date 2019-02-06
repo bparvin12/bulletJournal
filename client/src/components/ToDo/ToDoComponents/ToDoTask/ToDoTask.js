@@ -34,9 +34,6 @@ class ToDoTask extends React.Component {
                 <List dense="true">
                     <ListItem>
                         <ListItemAvatar>
-                            <Avatar>
-                                <FolderIcon />
-                            </Avatar>
                         </ListItemAvatar>
                         <ListItemText
                             primary="Single-line item"
