@@ -20,7 +20,9 @@
   },
   "dependencies": {
     "@material-ui/core": "^3.9.1",
+    "chart.js": "^2.7.3",
     "express": "^4.16.3",
-    "if-env": "^1.0.4"
+    "if-env": "^1.0.4",
+    "react-chartjs-2": "^2.7.4"
   }
 }
