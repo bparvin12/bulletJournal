@@ -10,7 +10,6 @@ import IconButton from '@material-ui/core/IconButton';
 import Menu from '@material-ui/core/Menu';
 import MenuItem from '@material-ui/core/MenuItem';
 
-import "./ToDoTask.css";
 
 class ToDoTask extends React.Component {
     state = {
@@ -33,8 +32,7 @@ class ToDoTask extends React.Component {
             <div>
                 <List dense="true">
                     <ListItem>
-                        <ListItemAvatar>
-                        </ListItemAvatar>
+                        
                         <ListItemText
                             primary="Single-line item"
                         />
