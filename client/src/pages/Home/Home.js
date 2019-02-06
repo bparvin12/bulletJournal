@@ -7,6 +7,7 @@ import FinanceWidget from '../../widgets/Finance';
 import GoalsWidget from '../../widgets/Goals';
 import TodosWidget from '../../widgets/Todos';
 import Weather from "../../widgets/Weather";
+import Chart from "../../components/Chart";
 
 
 const styles = theme => ({
@@ -34,7 +35,7 @@ function CenteredGrid(props) {
      <wrapper>
       <Grid container spacing={24}>
         <Grid item xs={12}>
-          <Paper className={classes.paper}>xs=12 "Performance (Graph)"</Paper>
+          <Paper className={classes.paper}><Chart height="200"/></Paper>
         </Grid>
         <Grid item xs={4}>
           <Paper className={classes.paper}><TodosWidget /></Paper>
