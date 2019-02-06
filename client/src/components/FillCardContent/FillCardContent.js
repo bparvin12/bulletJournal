@@ -7,14 +7,11 @@ import ToDoTask from "../ToDoTask";
 
 
 
-const ToDoContent = props => {
+const FillCardContent = props => {
     const { classes } = props;
 
 
-
-
     return (
-
         <CardContent>
 
             <ToDoTask />
@@ -25,4 +22,4 @@ const ToDoContent = props => {
 
 
 
-export default ToDoContent;
+export default FillCardContent;
