@@ -6,6 +6,7 @@ import Grid from '@material-ui/core/Grid';
 import FinanceWidget from '../../widgets/Finance';
 import GoalsWidget from '../../widgets/Goals';
 import TodosWidget from '../../widgets/Todos';
+import Weather from "../../widgets/Weather";
 
 
 const styles = theme => ({
@@ -51,7 +52,7 @@ function CenteredGrid(props) {
           <Paper className={classes.paper}>xs=6</Paper>
         </Grid>
         <Grid item xs={3}>
-          <Paper className={classes.paper}>xs=3</Paper>
+          <Paper><Weather /></Paper>
         </Grid>
         <Grid item xs={3}>
           <Paper className={classes.paper}>xs=3</Paper>
