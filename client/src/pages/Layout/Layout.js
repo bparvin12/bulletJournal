@@ -4,8 +4,8 @@ import { withStyles } from '@material-ui/core/styles';
 import Paper from '@material-ui/core/Paper';
 import Grid from '@material-ui/core/Grid';
 import FinanceWidget from '../../widgets/Finance';
-// import GoalsWidget from '../../widgets/Goals';
-// import TodosWidget from '../../widgets/Todos';
+import GoalsWidget from '../../widgets/Goals';
+import TodosWidget from '../../widgets/Todos';
 import Weather from "../../widgets/Weather";
 import BarChart from "../../components/Charts/BarChart";
 import LineChart from "../../components/Charts/LineChart";
@@ -74,7 +74,7 @@ function CenteredGrid(props) {
           <Paper className={classes.paper}><BarChart height="200"/></Paper>
         </Grid>
         <Grid item xs={4}>
-          <Paper className={classes.paper}><FinanceWidget /></Paper>
+          <Paper className={classes.paper}><PieChart height="200"/></Paper>
         </Grid>
 
   {/* Fourth Row With the two Grid Tiles: To do list, MISC List */}       
@@ -85,6 +85,17 @@ function CenteredGrid(props) {
           <Paper className={classes.paper}>xs=6</Paper>
         </Grid>
       </Grid>
+
+  {/* Fifth Row With the three Grid Tiles: Task Chart, Goals, Budget */}       
+  <Grid item xs={4}>
+          <Paper className={classes.paper}><FinanceWidget /></Paper>
+        </Grid>
+        <Grid item xs={4}>
+          <Paper className={classes.paper}><GoalsWidget /></Paper>
+        </Grid>
+        <Grid item xs={4}>
+          <Paper className={classes.paper}><TodosWidget /></Paper>
+        </Grid>
       </wrapper>
     </div>
   );

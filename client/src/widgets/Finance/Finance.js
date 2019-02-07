@@ -3,16 +3,38 @@ import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
 import styles from './Finance.styles';
 import Button from '@material-ui/core/Button';
-
+import PieChart from '../../components/Charts/PieChart';
+//TODO: remove this variable and use state or props instead
+const chartData = {
+    labels: ['Personal', 'Education', 'Insurance', 'Utilities', 'Savings', 'Medical/Healthcare', 'Entertainment', 'Gifts/Donations','Retirement'],
+    datasets: [
+        {
+            label: 'Finance: Budget',
+            data: [
+                17508009,
+                12133009,
+                14486903,
+                19107009,
+                11103800,
+                16095009,
+            ],
+            backgroundColor:[
+                'rgba(0, 0, 255, 1)',
+                'rgba(0, 255, 0, 1)',
+                'rgba(0, 255, 255, 1)',
+                'rgba(128, 0, 128, 1)',
+                'rgba(128, 128, 128, 1)',
+                'rgba(255, 0, 0, 1)',
+            ]
+        }
+    ] 
+};
 
 const Finance = (props) => {
     const { classes } = props;
     return (
         <div>
-            <h1 className={classes.input}>THIS IS FINANCE!!</h1>
-            <Button variant="contained" className={classes.button}>
-                FINANCE
-           </Button>
+            <PieChart chartData={chartData} width={50} height={200} />
         </div>
     )
 }

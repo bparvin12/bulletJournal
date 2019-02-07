@@ -1,7 +1,7 @@
 import React, {Component} from "react";
-import {Line} from 'react-chartjs-2';
+import {Bar} from 'react-chartjs-2';
 
-class LineChart extends Component {
+class PerformanceChart extends Component {
     constructor(props){
         super(props);
         this.state = {
@@ -9,7 +9,7 @@ class LineChart extends Component {
                 labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'],
                 datasets: [
                     {
-                        label: 'Task Completion',
+                        label: 'Performance',
                         data: [
                             17508009,
                             12133009,
@@ -46,7 +46,7 @@ class LineChart extends Component {
     render() {
         return (
             <div className="chart">
-                <Line
+                <Bar
                 data={this.state.chartData}
                 width={50}
                 height={200}
@@ -59,4 +59,4 @@ class LineChart extends Component {
     }
 }
 
-export default LineChart;
+export default PerformanceChart;

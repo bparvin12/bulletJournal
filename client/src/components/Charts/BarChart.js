@@ -6,37 +6,25 @@ class BarChart extends Component {
         super(props);
         this.state = {
             chartData:{
-                labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'],
+                labels: ['January', 'February', 'March', 'April', 'May', 'June',],
                 datasets: [
                     {
-                        label: 'Perforance',
+                        label: 'Goals Achieved',
                         data: [
                             17508009,
-                            12133009,
-                            14486903,
                             19107009,
-                            11103800,
                             16095009,
-                            10133009,
                             14486903,
                             17107009,
-                            13486903,
                             15107009,
-                            11103800,
                         ],
                         backgroundColor:[
                             'rgba(0, 0, 255, 1)',
-                            'rgba(0, 255, 0, 1)',
                             'rgba(0, 255, 255, 1)',
                             'rgba(128, 0, 128, 1)',
-                            'rgba(128, 128, 128, 1)',
-                            'rgba(255, 0, 0, 1)',
                             'rgba(0, 0, 255, 1)',
-                            'rgba(0, 255, 0, 1)',
                             'rgba(0, 255, 255, 1)',
                             'rgba(128, 0, 128, 1)',
-                            'rgba(128, 128, 128, 1)',
-                            'rgba(255, 0, 0, 1)',
                         ]
                     }
                 ] 
