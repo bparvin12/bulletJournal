@@ -34,10 +34,11 @@ class InputDialogue extends React.Component {
           <DialogTitle id="form-dialog-title">
             <Typography>
               Add to {this.props.title}
+            
+              <IconButton onClick={this.handleClose} color="primary">
+                <i className="material-icons">close</i>
+              </IconButton>
             </Typography>
-            <Button onClick={this.handleClose} color="primary">
-              <i className="material-icons">close</i>
-            </Button>
           </DialogTitle>
           <DialogContent>
             {this.props.children}
