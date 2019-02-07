@@ -4,10 +4,12 @@ import React from "react";
 
 const styles = {
     div: {
-        display: "flex"
+        display: "flex",
+        width: "100%%"
     },
     iframe: {
         display: "flex",
+        width: "100%"
     },
     a: {
         textIndent: "-9999em",

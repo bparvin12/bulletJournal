@@ -7,6 +7,7 @@ import FinanceWidget from '../../widgets/Finance';
 import GoalsWidget from '../../widgets/Goals';
 import TodosWidget from '../../widgets/Todos';
 import Weather from "../../widgets/Weather";
+import Chat from "../../widgets/Chat";
 
 
 const styles = theme => ({
@@ -52,10 +53,10 @@ function CenteredGrid(props) {
           <Paper className={classes.paper}>xs=6</Paper>
         </Grid>
         <Grid item xs={3}>
-          <Paper><Weather /></Paper>
+          <Weather />
         </Grid>
         <Grid item xs={3}>
-          <Paper className={classes.paper}>xs=3</Paper>
+          <Chat />
         </Grid>
         <Grid item xs={3}>
           <Paper className={classes.paper}>xs=3</Paper>
