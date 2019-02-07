@@ -1,6 +1,7 @@
 import React from "react";
 import { Button, ToolTip, IconButton, ClickAwayListener, Card, CardHeader, CardContent, Toolbar, Typography } from "@material-ui/core";
 import PropTypes from 'prop-types';
+import InputDialogue from "./InputDialogue";
 
 
 const FillCardHeader = props => {
@@ -14,9 +15,7 @@ const FillCardHeader = props => {
                     {props.title}
                 </Typography>
                 <div>
-                    <IconButton onClick={props.clickAction}>
-                        <i className="material-icons">add</i>
-                    </IconButton>
+                    <InputDialogue icon={props.icon} title = {props.title}>{props.children}</InputDialogue>
                 </div>
             </Toolbar>
         </div>

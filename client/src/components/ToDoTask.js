@@ -50,8 +50,9 @@ class ToDoTask extends React.Component {
                                 open={Boolean(anchorEl)}
                                 onClose={this.handleClose}
                             >
+                                <MenuItem onClick={this.handleClose}>Edit</MenuItem>
                                 <MenuItem onClick={this.handleClose}>start</MenuItem>
-                                <MenuItem onClick={this.handleClose}>postpon</MenuItem>
+                                <MenuItem onClick={this.handleClose}>postpone</MenuItem>
                                 <MenuItem onClick={this.handleClose}>complete</MenuItem>
                                 <MenuItem onClick={this.handleClose}>cancel</MenuItem>
                             </Menu>

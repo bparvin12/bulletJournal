@@ -6,17 +6,19 @@ import Card from "@material-ui/core/Card";
 import CardContent from "@material-ui/core/CardContent";
 import FillCardHeader from "../../components/FillCardHeader";
 import ToDoTask from "../../components/ToDoTask";
+import InputDialogue from "../../components/InputDialogue";
+import AddTaskItemForm from "../../components/AddTaskItemForm";
 
 const Todos = (props) => {
     const { classes } = props;
 
-    const AddTaskClick = () => {
-        console.log("add task clicked"); 
-    };
+    const AddTaskClick = () => {console.log("hallo")};
 
     return (
         <Card>
-            <FillCardHeader title="To Do List:" clickAction={AddTaskClick}/>
+            <FillCardHeader title="To Do List:" icon="add">
+                <AddTaskItemForm />
+            </FillCardHeader>
             <CardContent >
                 <ToDoTask />
             </CardContent>
