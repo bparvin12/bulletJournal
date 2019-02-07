@@ -11,26 +11,10 @@ import { tokenUrl, instanceLocator } from "../../config";
 const styles = {
     roomlist: {
         height: "500px",
-        border: "1px",
-        borderColor: "black",
-        borderStyle: "solid",
     },
     messagelist: {
         height: "500px",
-        border: "1px",
-        borderColor: "black",
-        borderStyle: "solid",
     },
-    sendmessageform: {
-        border: "1px",
-        borderColor: "black",
-        borderStyle: "solid",
-    },
-    newroomform: {
-        border: "1px",
-        borderColor: "black",
-        borderStyle: "solid",
-    }
 }
 
 class CompleteChat extends React.Component {
@@ -125,28 +109,26 @@ class CompleteChat extends React.Component {
                     justify="flex-start"
                     alignItems="stretch"
                 >
-                    <Grid style={styles.roomlist} item xs={4} className="room-grid">
+                    <Grid style={styles.roomlist} item xs={4} className="room-grid panel panel-default">
                         <RoomList 
                             roomId={this.state.roomId}
                             subscribeToRoom={this.subscribeToRoom} 
                             rooms={[...this.state.joinableRooms, ...this.state.joinedRooms]} />
                     </Grid>
-                    <Grid style={styles.messagelist} item xs={8} className="message-grid">
+                    <Grid style={styles.messagelist} item xs={8} className="message-grid panel panel-default">
                         <MessageList 
                             roomId={this.state.roomId}
                             messages={this.state.messages} />
                     </Grid>
-                    <Grid style={styles.sendmessageform} item xs={4}>
+                    <Grid style={styles.sendmessageform} item xs={4} className="panel panel-default">
                         <NewRoomForm createRoom={this.createRoom}/>
                     </Grid>
-                    <Grid style={styles.newroomform} item xs={8}>
+                    <Grid style={styles.newroomform} item xs={8} className="panel panel-default">
                         <SendMessageForm 
                             disabled={!this.state.roomId}
                             sendMessage={this.sendMessage} />
                     </Grid>
                 </Grid>
-
-
             </div>
         )
     }

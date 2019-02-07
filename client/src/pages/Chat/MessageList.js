@@ -20,8 +20,8 @@ class MessageList extends React.Component {
     render() {
         if (!this.props.roomId) {
             return(
-                <div className="message-list">
-                    <div className="join-room">
+                <div className="join-a-room">
+                    <div className="align-middle alert alert-info">
                         &larr; Join a room!
                     </div>
                 </div>

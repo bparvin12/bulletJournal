@@ -1,61 +1,11 @@
-.message {
-    margin-bottom: 5px;
-}
-
-.message-username {
-    text-align: left;
-    font-size: 10px;
-}
-
-.message-text {
-    text-align: left;
-    font-size: 20px;
-    border-radius: 5px;
-    background-color: dodgerblue;
-    display: inline;
-}
-
-/* .send-message-form {
-
-} */
-
-.message-input {
-    width: 100%;
-    box-sizing: border-box;
-    background-color: azure;
-    color: black;
-    height: 50px;
-}
-
-.rooms-list {
-    display: inline;
-}
-
-.room {
-    list-style-position: outside;
-}
-
-.room-link:link, .room-link:visited {
-    background-color: dodgerblue;
-    color: white;
-    padding: 14px 25px;
-    text-align: center; 
-    text-decoration: none;
-    display: inline-block;
-}
-
-.room-link:hover, .room-link:active {
-    background-color: rgb(14, 129, 243);
-}
-
-.room:active {
-    color: black;
-}
-
 .message-grid {
     overflow-y: scroll;
 }
 
 .room-grid {
     overflow-y: scroll;
+}
+
+.join-a-room {
+    margin-top: 25%
 }

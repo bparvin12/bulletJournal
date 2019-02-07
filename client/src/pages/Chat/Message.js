@@ -3,8 +3,8 @@ import React from "react"
 const Message = (props) => {
     return (
         <div className="message">
-            <div className="message-username">{props.username}</div>
-            <div className="message-text">{props.text}</div>
+            <h6 className="message-username">{props.username}</h6>
+            <div className="btn btn-primary disabled">{props.text}</div>
         </div>
     )
 }
