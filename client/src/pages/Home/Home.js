@@ -7,13 +7,15 @@ import FinanceWidget from '../../widgets/Finance';
 import GoalsWidget from '../../widgets/Goals';
 import TodosWidget from '../../widgets/Todos';
 import Weather from "../../widgets/Weather";
-import Chart from "../../components/Chart";
+import BarChart from "../../components/Charts/BarChart";
+import LineChart from "../../components/Charts/LineChart";
+import PieChart from "../../components/Charts/PieChart";
 
 
 const styles = theme => ({
   root: {
     flexGrow: 1,
-    background: 'linear-gradient(45deg, #FE6B8B 30%, #FF8E53 90%)',
+    background: 'black',
     flexWrap: 'wrap',
     justifyContent: 'space-around',
     padding:'26px',
@@ -21,6 +23,7 @@ const styles = theme => ({
   },
   paper: {
     height: 240,
+    background: "#333",
     padding: theme.spacing.unit * 2,
     textAlign: 'center',
     color: 'theme.palette.text.secondary',
@@ -33,9 +36,9 @@ function CenteredGrid(props) {
   return (
     <div className={classes.root}>
      <wrapper>
-      <Grid container spacing={24}>
-        <Grid item xs={12}>
-          <Paper className={classes.paper}><Chart height="200"/></Paper>
+      <Grid container spacing={24} >
+        <Grid item xs={12} >
+          <Paper className={classes.paper}><BarChart height="200"/></Paper>
         </Grid>
         <Grid item xs={4}>
           <Paper className={classes.paper}><TodosWidget /></Paper>
@@ -56,13 +59,13 @@ function CenteredGrid(props) {
           <Paper><Weather /></Paper>
         </Grid>
         <Grid item xs={3}>
-          <Paper className={classes.paper}>xs=3</Paper>
+          <Paper className={classes.paper}><PieChart height="200"/></Paper>
         </Grid>
         <Grid item xs={3}>
           <Paper className={classes.paper}>xs=3</Paper>
         </Grid>
         <Grid item xs={3}>
-          <Paper className={classes.paper}>xs=3</Paper>
+          <Paper className={classes.paper}><LineChart height="200"/></Paper>
         </Grid>
       </Grid>
       </wrapper>
