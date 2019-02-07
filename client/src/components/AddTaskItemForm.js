@@ -7,6 +7,7 @@ import { MuiPickersUtilsProvider, TimePicker, DatePicker } from 'material-ui-pic
 import purple from '@material-ui/core/colors/purple';
 import green from '@material-ui/core/colors/green';
 import InputTextBox from './InputTextBox';
+import InputCalendarDate from './InputCalendarDate';
 
 
 
@@ -18,8 +19,8 @@ class AddTaskItemForm extends React.Component {
   
     return (
       <div>
-      <InputTextBox label="Task" />
-      <InputTextBox label="Deadline" />
+      <InputTextBox label="Task" inputClass = "taskToAdd" />
+      <InputCalendarDate  />
       </div>
     );
   }

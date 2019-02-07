@@ -54,12 +54,13 @@ const InputTextBox = props => {
                 </InputLabel>
                 <Input
                     id="custom-css-standard-input"
+                    className = {props.inputClass}
                     classes={{
                         underline: classes.cssUnderline,
                     }}
                 />
             </FormControl>
-        </div>
+        </div>  
     );
 }
 
