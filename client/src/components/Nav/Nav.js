@@ -25,17 +25,17 @@ const Nav = props => {
     <IconButton
         color="inherit"
         aria-label="Open drawer"
-        onClick={this.handleDrawerOpen}
+        onClick={props.handleDrawerOpen}
         className={classNames(classes.menuButton, {
         [classes.hide]: props.open,
         })}
     >
         <MenuIcon />
     </IconButton>
-    <Typography variant="h6" color="inherit" noWrap>
+    <Typography variant="h2" color="inherit" noWrap>
         Queue The Butler
     </Typography>
-    
+
     <div className={classes.search}>
         <div className={classes.searchIcon}>
         <SearchIcon />
@@ -56,8 +56,7 @@ const Nav = props => {
 };
 
 Nav.propTypes = {
-  classes: PropTypes.object.isRequired,
-  theme: PropTypes.object.isRequired,
+  classes: PropTypes.object.isRequired
 };
 
 export default withStyles(styles)(Nav);

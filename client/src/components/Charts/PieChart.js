@@ -14,10 +14,6 @@ export default props =>
 </div>;
 
 export class PieChart extends Component {
-    constructor(props){
-        super(props);
-        
-    }
     render() {
         return (
             <div className="chart">
