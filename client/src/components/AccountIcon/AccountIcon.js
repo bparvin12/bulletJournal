@@ -16,6 +16,7 @@ import AccountCircle from '@material-ui/icons/AccountCircle';
 import MailIcon from '@material-ui/icons/Mail';
 import NotificationsIcon from '@material-ui/icons/Notifications';
 import MoreIcon from '@material-ui/icons/MoreVert';
+import { Link } from 'react-router-dom';
 
 
 // import WeatherContainer from "../Weather";
@@ -132,6 +133,8 @@ class AccountIcon extends React.Component {
       >
         <MenuItem onClick={this.handleMenuClose}>Profile</MenuItem>
         <MenuItem onClick={this.handleMenuClose}>My account</MenuItem>
+        <MenuItem><Link className='nav-link' to='/signin'>Sign In</Link></MenuItem>
+        <MenuItem><Link className='nav-link' to='/signup'>Sign Up</Link></MenuItem>
       </Menu>
     );
 

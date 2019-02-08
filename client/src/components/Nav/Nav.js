@@ -12,6 +12,7 @@ import SearchIcon from '@material-ui/icons/Search';
 import AccountIcon from "../AccountIcon";
 import { withStyles } from '@material-ui/core/styles';
 import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
 
 const Nav = props => {
     const { classes } = props;
@@ -33,7 +34,7 @@ const Nav = props => {
         <MenuIcon />
     </IconButton>
     <Typography variant="h2" color="inherit" noWrap>
-        Queue The Butler
+    <Link className='nav-link' to='/'>Q The Butler</Link>
     </Typography>
 
     <div className={classes.search}>
