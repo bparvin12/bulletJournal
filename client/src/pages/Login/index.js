@@ -6,4 +6,4 @@ export { default } from "./Login.js";
 
 // Body:
 
-<div id="mySignin" onclick="login()"><img src="glogin2.png" alt="google" style="cursor:pointer;height: 50px;width: 309px;"/></div>
+<div id="mySignin" onclick="users/signin"><img src="glogin2.png" alt="google" style="cursor:pointer;height: 50px;width: 309px;"/></div>
