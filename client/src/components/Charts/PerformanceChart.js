@@ -24,7 +24,7 @@ class PerformanceChart extends Component {
                             15107009,
                             11103800,
                         ],
-                        backgroundColor:[
+                        borderColor:[
                             'rgba(0, 0, 255, 1)',
                             'rgba(0, 255, 0, 1)',
                             'rgba(0, 255, 255, 1)',
@@ -37,7 +37,8 @@ class PerformanceChart extends Component {
                             'rgba(128, 0, 128, 1)',
                             'rgba(128, 128, 128, 1)',
                             'rgba(255, 0, 0, 1)',
-                        ]
+                        ],
+                        borderWidth: 2          
                     }
                 ] 
             }
