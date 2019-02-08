@@ -5,17 +5,19 @@ import styles from './Finance.styles';
 import PieChart from '../../components/Charts/PieChart';
 //TODO: remove this variable and use state or props instead
 const chartData = {
-    labels: ['Personal', 'Education', 'Insurance', 'Utilities', 'Savings', 'Medical/Healthcare', 'Entertainment', 'Gifts/Donations','Retirement'],
+    labels: ['Personal', 'Education', 'Utilities', 'Savings', 'Medical/Healthcare', 'Entertainment', 'Gifts/Donations','Retirement'],
     datasets: [
         {
-            label: 'Finance: Budget',
+            label: 'Budget',
             data: [
-                17508009,
-                12133009,
-                14486903,
-                19107009,
-                11103800,
-                16095009,
+                28000,
+                20000,
+                14000,
+                12000,
+                10000,
+                8000,
+                6000,
+                2000,
             ],
             backgroundColor:[
                 'rgba(0, 0, 255, 1)',
@@ -24,6 +26,8 @@ const chartData = {
                 'rgba(128, 0, 128, 1)',
                 'rgba(128, 128, 128, 1)',
                 'rgba(255, 0, 0, 1)',
+                'rgba(0, 0, 255, 1)',
+                'rgba(0, 255, 0, 1)',
             ]
         }
     ] 

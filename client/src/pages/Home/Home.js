@@ -49,7 +49,7 @@ function CenteredGrid(props) {
   {/* Top Row With the Notification Cards */}
         <Grid container spacing={24} >
         <Grid item xs={3}>
-          <Card className={classes.card}>New Headlines</Card>
+          <Card className={classes.card}>News Headlines</Card>
         </Grid>
         <Grid item xs={3}>
           <Card className={classes.card}><Weather height="200"/></Card>
@@ -79,10 +79,10 @@ function CenteredGrid(props) {
 
   {/* Fourth Row With the two Grid Tiles: To do list, MISC List */}       
         <Grid item xs={6}>
-          <Paper className={classes.paper}>xs=6</Paper>
+          <Paper className={classes.paper}>To Do List Placeholder</Paper>
         </Grid>
         <Grid item xs={6}>
-          <Paper className={classes.paper}>xs=6</Paper>
+          <Paper className={classes.paper}>Data Table Placeholder</Paper>
         </Grid>
       </Grid>
       </wrapper>
