@@ -1,0 +1,11 @@
+.message-grid {
+    overflow-y: scroll;
+}
+
+.room-grid {
+    overflow-y: scroll;
+}
+
+.join-a-room {
+    margin-top: 25%
+}
