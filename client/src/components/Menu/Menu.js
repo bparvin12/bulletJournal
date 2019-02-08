@@ -37,7 +37,7 @@ class Menu extends React.Component {
     return (
       <div className={classes.root}>
         <CssBaseline />
-        <Nav open={this.state.open} />
+        <Nav open={this.state.open} handleDrawerOpen={this.handleDrawerOpen} />
         <Drawer
           variant="permanent"
           className={classNames(classes.drawer, {

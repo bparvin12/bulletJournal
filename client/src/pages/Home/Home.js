@@ -29,12 +29,11 @@ const styles = theme => ({
     background: '#171a26',
     padding: theme.spacing.unit * 2,
     textAlign: 'center',
-    color: '#D3D3D3',
-    contrastText: '#D3D3D3',
+    // color: '#D3D3D3',
   },
  card: {
     height: 120,
-    background: '#171a26',
+    background: 'linear-gradient(45deg, #262b40 30%, #171a26 90%)',
     padding: theme.spacing.unit * 2,
     textAlign: 'center',
     color: '#D3D3D3',
@@ -46,7 +45,6 @@ function CenteredGrid(props) {
 
   return (
     <div className={classes.root}>
-     <wrapper>
 
   {/* Top Row With the Notification Cards */}
         <Grid container spacing={24} >
@@ -87,7 +85,6 @@ function CenteredGrid(props) {
           <Paper className={classes.paper}>Data Table Placeholder</Paper>
         </Grid>
       </Grid>
-      </wrapper>
     </div>
   );
 }

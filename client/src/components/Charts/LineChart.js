@@ -24,7 +24,7 @@ class LineChart extends Component {
                             15107009,
                             11103800,
                         ],
-                        backgroundColor:[
+                        borderColor:[
                             'rgba(0, 0, 255, 1)',
                             'rgba(0, 255, 0, 1)',
                             'rgba(0, 255, 255, 1)',
@@ -51,7 +51,7 @@ class LineChart extends Component {
                 width={50}
                 height={200}
                 options={{
-                    maintainAspectRatio: false
+                    maintainAspectRatio: false,
                     }}
                 />
             </div>
