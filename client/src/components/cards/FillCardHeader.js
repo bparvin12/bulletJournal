@@ -1,7 +1,7 @@
 import React from "react";
 import { Button, ToolTip, IconButton, ClickAwayListener, Card, CardHeader, CardContent, Toolbar, Typography } from "@material-ui/core";
 import PropTypes from 'prop-types';
-import InputDialogue from "../inputs/InputDialogue";
+import InputDialogue from "../Inputs/InputDialogue";
 
 
 const FillCardHeader = props => {
@@ -15,7 +15,7 @@ const FillCardHeader = props => {
                     {props.title}
                 </Typography>
                 <div>
-                    <InputDialogue icon={props.icon} title = {props.title}>{props.children}</InputDialogue>
+                    <InputDialogue icon={props.icon} dbCollection="queuedb" title = {props.title}>{props.children}</InputDialogue>
                 </div>
             </Toolbar>
         </div>
