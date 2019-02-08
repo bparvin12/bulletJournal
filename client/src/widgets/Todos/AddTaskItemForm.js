@@ -6,8 +6,8 @@ import DateFnsUtils from '@date-io/date-fns';
 import { MuiPickersUtilsProvider, TimePicker, DatePicker } from 'material-ui-pickers';
 import purple from '@material-ui/core/colors/purple';
 import green from '@material-ui/core/colors/green';
-import InputTextBox from './InputTextBox';
-import InputCalendarDate from './InputCalendarDate';
+import InputTextBox from "../../components/inputs/InputTextBox";
+import InputCalendarDate from '../../components/inputs/InputCalendarDate';
 
 
 

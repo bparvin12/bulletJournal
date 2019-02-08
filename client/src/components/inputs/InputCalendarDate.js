@@ -31,7 +31,7 @@ const InputCalendarDate = props => {
                 type="Date"
                 defaultValue= ""
                 className={classes.textField}
-                InputLabelProps={{
+                InputLabelProps={{ 
                     shrink: true,
                 }}
             />

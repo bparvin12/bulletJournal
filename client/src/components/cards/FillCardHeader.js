@@ -1,7 +1,7 @@
 import React from "react";
 import { Button, ToolTip, IconButton, ClickAwayListener, Card, CardHeader, CardContent, Toolbar, Typography } from "@material-ui/core";
 import PropTypes from 'prop-types';
-import InputDialogue from "./InputDialogue";
+import InputDialogue from "../inputs/InputDialogue";
 
 
 const FillCardHeader = props => {
