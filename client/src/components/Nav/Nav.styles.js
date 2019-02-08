@@ -68,4 +68,18 @@ export default theme => ({
         },
       },
     },
+    sectionMobile: {
+      display: 'flex',
+      [theme.breakpoints.up('md')]: {
+        display: 'none',
+      },
+    },
+    title: {
+      display: 'none',
+      align: 'left',
+      [theme.breakpoints.up('lg')]: {
+        display: 'block',
+      },
+    }
+
 });

@@ -87,5 +87,11 @@ export default theme => ({
         display: 'none',
       },
     },
-
+    title: {
+      display: 'none',
+      align: 'left',
+      [theme.breakpoints.up('lg')]: {
+        display: 'block',
+      },
+    }
 });
