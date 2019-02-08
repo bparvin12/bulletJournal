@@ -18,10 +18,19 @@ class InputDialogue extends React.Component {
     this.setState({ open: false });
   };
 
+  handleAddClose = () =>{
+
+
+
+    this.setState({ open: false});
+
+  }
+
   render() {
     console.log(this.props.title);
     return (
       <div>
+        {/* this  is the part that will trigger the dialog */}
         <IconButton variant="outlined" color="primary" onClick={this.handleClickOpen}>
           {/* in case we want a different icon */}
           <i className="material-icons">{this.props.icon}</i>
@@ -35,7 +44,7 @@ class InputDialogue extends React.Component {
             <Typography>
               Add to {this.props.title}
             
-              <IconButton onClick={this.handleClose} color="primary">
+              <IconButton onClick={this.handleClose}  color="primary">
                 <i className="material-icons">close</i>
               </IconButton>
             </Typography>
@@ -44,7 +53,7 @@ class InputDialogue extends React.Component {
             {this.props.children}
           </DialogContent>
           <DialogActions>
-            <Button onClick={this.handleClose} color="primary">
+            <Button onClick={this.handleAddClose} color="primary">
               ADD
             </Button>
           </DialogActions>

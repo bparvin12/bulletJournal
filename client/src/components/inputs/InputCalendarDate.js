@@ -6,15 +6,16 @@ import TextField from '@material-ui/core/TextField';
 
 const styles = theme => ({
     container: {
-        display: 'flex',
-        flexWrap: 'wrap',
+      display: 'flex',
+      flexWrap: 'wrap',
     },
     textField: {
-        marginLeft: theme.spacing.unit,
-        marginRight: theme.spacing.unit,
-        width: 200,
+      marginLeft: theme.spacing.unit,
+      marginRight: theme.spacing.unit,
+      width: 200,
     },
-});
+  });
+  
 
 
 const InputCalendarDate = props => {
@@ -31,7 +32,7 @@ const InputCalendarDate = props => {
                 type="Date"
                 defaultValue= ""
                 className={classes.textField}
-                InputLabelProps={{
+                InputLabelProps={{ 
                     shrink: true,
                 }}
             />
@@ -39,6 +40,9 @@ const InputCalendarDate = props => {
     );
 }
 
-
+InputCalendarDate.propTypes = {
+    classes: PropTypes.object.isRequired,
+  };
+  
 
 export default withStyles(styles)(InputCalendarDate);
