@@ -12,6 +12,7 @@ import LineChart from "../../components/Charts/LineChart";
 // import PieChart from "../../components/Charts/PieChart";
 import PerformanceChart from "../../components/Charts/PerformanceChart";
 import { Card } from '@material-ui/core';
+import Chat from "../../widgets/Chat";
 
 
 const styles = theme => ({
@@ -58,7 +59,7 @@ function CenteredGrid(props) {
           <Card className={classes.card}>Social Media Notification</Card>
         </Grid>
         <Grid item xs={3}>
-          <Card className={classes.card}>Community Chat</Card>
+          <Card className={classes.card}><Chat /></Card>
         </Grid>
 
   {/* Second Row With the Performance Chart Grid Tile*/}      
