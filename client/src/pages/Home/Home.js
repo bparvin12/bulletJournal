@@ -18,7 +18,7 @@ import Chat from "../../widgets/Chat";
 const styles = theme => ({
   root: {
     flexGrow: 1,
-    background: 'black',
+    background: 'rgba(0, 0, 0, 0.1)',
     flexWrap: 'wrap',
     justifyContent: 'space-around',
     padding:'26px',
@@ -26,17 +26,18 @@ const styles = theme => ({
   },
   paper: {
     height: 240,
-    background: "#333",
+    background: '#171a26',
     padding: theme.spacing.unit * 2,
     textAlign: 'center',
-    color: 'theme.palette.text.secondary',
+    color: '#D3D3D3',
+    contrastText: '#D3D3D3',
   },
  card: {
     height: 120,
-    background: "#333",
+    background: '#171a26',
     padding: theme.spacing.unit * 2,
     textAlign: 'center',
-    color: 'black',
+    color: '#D3D3D3',
   },
 });
 

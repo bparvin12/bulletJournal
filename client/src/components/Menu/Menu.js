@@ -56,6 +56,7 @@ class Menu extends React.Component {
             <IconButton onClick={this.handleDrawerClose}>
               {theme.direction === 'rtl' ? <ChevronRightIcon /> : <ChevronLeftIcon />}
             </IconButton>
+     
           </div>
           <Divider />
           <List>

@@ -1,9 +1,7 @@
 import { fade } from '@material-ui/core/styles/colorManipulator';
 const drawerWidth = 240;
+
 export default theme => ({
-  root: {
-    display: 'flex',
-  },
     appBar: {
       zIndex: theme.zIndex.drawer + 1,
       transition: theme.transitions.create(['width', 'margin'], {
@@ -19,13 +17,24 @@ export default theme => ({
         duration: theme.transitions.duration.enteringScreen,
       }),
     },
-    menuButton: {
-      marginLeft: 12,
-      marginRight: 36,
-      flex: 1,
+    root: {
+      width: '100%',
     },
-    hide: {
+    grow: {
+      flexGrow: 1,
+    },
+    menuButton: {
+      marginLeft: -12,
+      marginRight: 20,
+    },
+    // hide: {
+    //   display: 'none',
+    // },
+    title: {
       display: 'none',
+      [theme.breakpoints.up('sm')]: {
+        display: 'block',
+      },
     },
     search: {
       position: 'relative',
@@ -34,10 +43,11 @@ export default theme => ({
       '&:hover': {
         backgroundColor: fade(theme.palette.common.white, 0.25),
       },
+      marginRight: theme.spacing.unit * 2,
       marginLeft: 0,
       width: '100%',
       [theme.breakpoints.up('sm')]: {
-        marginLeft: theme.spacing.unit,
+        mmarginLeft: theme.spacing.unit * 3,
         width: 'auto',
       },
     },
@@ -61,11 +71,21 @@ export default theme => ({
       paddingLeft: theme.spacing.unit * 10,
       transition: theme.transitions.create('width'),
       width: '100%',
-      [theme.breakpoints.up('sm')]: {
-        width: 120,
-        '&:focus': {
-          width: 200,
-        },
+      [theme.breakpoints.up('md')]: {
+        width: 200,
       },
     },
+    sectionDesktop: {
+      display: 'none',
+      [theme.breakpoints.up('md')]: {
+        display: 'flex',
+      },
+    },
+    sectionMobile: {
+      display: 'flex',
+      [theme.breakpoints.up('md')]: {
+        display: 'none',
+      },
+    },
+
 });

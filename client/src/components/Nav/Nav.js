@@ -35,7 +35,7 @@ const Nav = props => {
     <Typography variant="h6" color="inherit" noWrap>
         Queue The Butler
     </Typography>
-    
+
     <div className={classes.search}>
         <div className={classes.searchIcon}>
         <SearchIcon />
