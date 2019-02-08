@@ -13,7 +13,7 @@ export default props =>
     />
 </div>;
 
-class PieChart extends Component {
+export class PieChart extends Component {
     constructor(props){
         super(props);
         
@@ -34,4 +34,4 @@ class PieChart extends Component {
     }
 }
 
-export default PieChart;
+//export default PieChart;

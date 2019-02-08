@@ -9,7 +9,7 @@ import FinanceWidget from '../../widgets/Finance';
 import Weather from "../../widgets/Weather";
 import BarChart from "../../components/Charts/BarChart";
 import LineChart from "../../components/Charts/LineChart";
-import PieChart from "../../components/Charts/PieChart";
+// import PieChart from "../../components/Charts/PieChart";
 import PerformanceChart from "../../components/Charts/PerformanceChart";
 import { Card } from '@material-ui/core';
 

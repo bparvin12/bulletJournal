@@ -2,7 +2,6 @@ import React from "react";
 import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
 import styles from './Finance.styles';
-import Button from '@material-ui/core/Button';
 import PieChart from '../../components/Charts/PieChart';
 //TODO: remove this variable and use state or props instead
 const chartData = {
