@@ -25,7 +25,7 @@ const Login = (props) => {
     )
 }
 
-Finance.propTypes = {
+Login.propTypes = {
   classes: PropTypes.object.isRequired,
 };
 

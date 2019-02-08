@@ -6,7 +6,7 @@ import Goals from "./pages/Goals";
 import Health from "./pages/Health";
 import Weather from "./pages/Weather";
 import CompleteChat from "./pages/Chat";
-// import Login from "./pages/Login";
+import Login from "./pages/Login";
 import Menu from "./components/Menu";
 
 import "./App.css";
@@ -21,7 +21,7 @@ const App = () => (
       <Route exact path="/health" component={Health} />
       <Route exact path="/weather" component={Weather} />
       <Route exact path="/chat" component={CompleteChat} />
-      {/* <Route exact path="/login" component={Login} /> */}
+      <Route exact path="/login" component={Login} />
     </Menu>
   </Router>
 );
