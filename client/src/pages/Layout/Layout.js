@@ -4,15 +4,14 @@ import { withStyles } from '@material-ui/core/styles';
 import Paper from '@material-ui/core/Paper';
 import Grid from '@material-ui/core/Grid';
 import FinanceWidget from '../../widgets/Finance';
-// import GoalsWidget from '../../widgets/Goals';
-// import TodosWidget from '../../widgets/Todos';
+import GoalsWidget from '../../widgets/Goals';
+import TodosWidget from '../../widgets/Todos';
 import Weather from "../../widgets/Weather";
 import BarChart from "../../components/Charts/BarChart";
 import LineChart from "../../components/Charts/LineChart";
-// import PieChart from "../../components/Charts/PieChart";
+import PieChart from "../../components/Charts/PieChart";
 import PerformanceChart from "../../components/Charts/PerformanceChart";
 import { Card } from '@material-ui/core';
-import Chat from "../../widgets/Chat";
 
 
 const styles = theme => ({
@@ -50,7 +49,7 @@ function CenteredGrid(props) {
   {/* Top Row With the Notification Cards */}
         <Grid container spacing={24} >
         <Grid item xs={3}>
-          <Card className={classes.card}>News Headlines</Card>
+          <Card className={classes.card}>New Headlines</Card>
         </Grid>
         <Grid item xs={3}>
           <Card className={classes.card}><Weather height="200"/></Card>
@@ -59,7 +58,7 @@ function CenteredGrid(props) {
           <Card className={classes.card}>Social Media Notification</Card>
         </Grid>
         <Grid item xs={3}>
-          <Card className={classes.card}><Chat /></Card>
+          <Card className={classes.card}>Community Chat</Card>
         </Grid>
 
   {/* Second Row With the Performance Chart Grid Tile*/}      
@@ -75,17 +74,28 @@ function CenteredGrid(props) {
           <Paper className={classes.paper}><BarChart height="200"/></Paper>
         </Grid>
         <Grid item xs={4}>
-          <Paper className={classes.paper}><FinanceWidget /></Paper>
+          <Paper className={classes.paper}><PieChart height="200"/></Paper>
         </Grid>
 
   {/* Fourth Row With the two Grid Tiles: To do list, MISC List */}       
         <Grid item xs={6}>
-          <Paper className={classes.paper}>To Do List Placeholder</Paper>
+          <Paper className={classes.paper}>xs=6</Paper>
         </Grid>
         <Grid item xs={6}>
-          <Paper className={classes.paper}>Data Table Placeholder</Paper>
+          <Paper className={classes.paper}>xs=6</Paper>
         </Grid>
       </Grid>
+
+  {/* Fifth Row With the three Grid Tiles: Task Chart, Goals, Budget */}       
+  <Grid item xs={4}>
+          <Paper className={classes.paper}><FinanceWidget /></Paper>
+        </Grid>
+        <Grid item xs={4}>
+          <Paper className={classes.paper}><GoalsWidget /></Paper>
+        </Grid>
+        <Grid item xs={4}>
+          <Paper className={classes.paper}><TodosWidget /></Paper>
+        </Grid>
       </wrapper>
     </div>
   );
