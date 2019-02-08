@@ -5,7 +5,7 @@ import Paper from '@material-ui/core/Paper';
 import Grid from '@material-ui/core/Grid';
 import FinanceWidget from '../../widgets/Finance';
 // import GoalsWidget from '../../widgets/Goals';
-// import TodosWidget from '../../widgets/Todos';
+import TodosWidget from '../../widgets/Todos';
 import Weather from "../../widgets/Weather";
 import BarChart from "../../components/Charts/BarChart";
 import LineChart from "../../components/Charts/LineChart";
@@ -79,7 +79,8 @@ function CenteredGrid(props) {
 
   {/* Fourth Row With the two Grid Tiles: To do list, MISC List */}       
         <Grid item xs={6}>
-          <Paper className={classes.paper}>To Do List Placeholder</Paper>
+          {/* <Paper className={classes.paper}>To Do List Placeholder</Paper> */}
+          <TodosWidget />
         </Grid>
         <Grid item xs={6}>
           <Paper className={classes.paper}>Data Table Placeholder</Paper>

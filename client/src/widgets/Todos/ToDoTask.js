@@ -1,14 +1,6 @@
 import React from "react";
 
-import List from '@material-ui/core/List';
-import ListItem from '@material-ui/core/ListItem';
-import ListItemAvatar from '@material-ui/core/ListItemAvatar';
-import ListItemSecondaryAction from '@material-ui/core/ListItemSecondaryAction';
-import ListItemText from '@material-ui/core/ListItemText';
-import Avatar from '@material-ui/core/Avatar';
-import IconButton from '@material-ui/core/IconButton';
-import Menu from '@material-ui/core/Menu';
-import MenuItem from '@material-ui/core/MenuItem';
+import { List, ListItem, ListItemIcon, ListItemSecondaryAction, ListItemText, IconButton, Menu, MenuItem } from '@material-ui/core';
 
 
 class ToDoTask extends React.Component {
@@ -23,18 +15,36 @@ class ToDoTask extends React.Component {
     handleClose = () => {
         this.setState({ anchorEl: null });
     };
-
+    // make a function that checks the status from database
+    statusBullet = () => {
+        
+        switch (this.props.status) {
+            case "started":
+                return (<i className="material-icons">radio_button_checked</i>);
+            case "postponed":
+                return (<i className="material-icons">play_circle_outline</i>);
+            case "completed":
+                return (<i className="material-icons">check_circle_outline</i>);
+            case "canceled":
+                return (<i className="material-icons">cancel</i>);
+            default:
+                return (<i className="material-icons">radio_button_unchecked</i>);
+        }
+    }
 
     render() {
         const { anchorEl } = this.state;
 
         return (
             <div>
-                <List dense="true">
+                <List>
                     <ListItem>
-                        
+                        <ListItemIcon dense="true">
+                            {/* should technically call statusBullet() and return the material-icon with the corresponding status */}
+                            {this.statusBullet()}
+                        </ListItemIcon>
                         <ListItemText
-                            primary="Single-line item"
+                            primary={this.props.task}
                         />
                         <ListItemSecondaryAction>
                             <IconButton
@@ -57,7 +67,7 @@ class ToDoTask extends React.Component {
                                 <MenuItem onClick={this.handleClose}>cancel</MenuItem>
                             </Menu>
                         </ListItemSecondaryAction>
-                    </ListItem>,
+                    </ListItem>
                     {/* )} */}
                 </List>
             </div>
