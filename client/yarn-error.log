@@ -14,7 +14,7 @@ Platform:
   darwin x64
 
 Trace: 
-  SyntaxError: /Users/Bijan1/Desktop/uci_bootcamp/Projects/bulletJournal/package.json: Unexpected token < in JSON at position 666
+  SyntaxError: /Users/Bijan1/Desktop/uci_bootcamp/Projects/bulletJournal/package.json: Unexpected token < in JSON at position 706
       at JSON.parse (<anonymous>)
       at /usr/local/lib/node_modules/yarn/lib/cli.js:1625:59
       at Generator.next (<anonymous>)
