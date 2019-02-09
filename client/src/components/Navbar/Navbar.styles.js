@@ -3,6 +3,7 @@ const drawerWidth = 240;
 
 export default theme => ({
     appBar: {
+      backgroundColor: "",
       zIndex: theme.zIndex.drawer + 1,
       transition: theme.transitions.create(['width', 'margin'], {
         easing: theme.transitions.easing.sharp,
@@ -27,9 +28,6 @@ export default theme => ({
       marginLeft: -12,
       marginRight: 20,
     },
-    // hide: {
-    //   display: 'none',
-    // },
     title: {
       display: 'none',
       [theme.breakpoints.up('sm')]: {
@@ -47,7 +45,7 @@ export default theme => ({
       marginLeft: 0,
       width: '100%',
       [theme.breakpoints.up('sm')]: {
-        mmarginLeft: theme.spacing.unit * 3,
+        marginLeft: theme.spacing.unit * 3,
         width: 'auto',
       },
     },
@@ -87,11 +85,4 @@ export default theme => ({
         display: 'none',
       },
     },
-    title: {
-      display: 'none',
-      align: 'left',
-      [theme.breakpoints.up('lg')]: {
-        display: 'block',
-      },
-    }
-});
+  });
