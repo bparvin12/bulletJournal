@@ -7,11 +7,17 @@ import Health from "./pages/Health";
 import Weather from "./pages/Weather";
 import CompleteChat from "./pages/Chat"
 import Menu from "./components/Menu";
-
+import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles';
 import "./App.css";
 
+const theme = createMuiTheme({
+  palette: {
+    type: 'dark',
+  },
+});
 
 const App = () => (
+  <MuiThemeProvider theme={theme}>
   <Router>
     <Menu>
       <Route exact path="/" component={Home} />
@@ -22,10 +28,8 @@ const App = () => (
       <Route exact path="/chat" component={CompleteChat} />
     </Menu>
   </Router>
+  </MuiThemeProvider>
 );
-
-
-
 
 
 export default App;
