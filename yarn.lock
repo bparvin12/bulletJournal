@@ -885,7 +885,7 @@ express-router-promise@^1.0.7:
   resolved "https://registry.yarnpkg.com/express-router-promise/-/express-router-promise-1.0.7.tgz#ea36c06cabe2e7f654f87a09d06c9889cc8bbdeb"
   integrity sha1-6jbAbKvi5/ZU+HoJ0GyYicyLves=
 
-express@^4.16.4:
+express@^4.16.3:
   version "4.16.4"
   resolved "https://registry.yarnpkg.com/express/-/express-4.16.4.tgz#fddef61926109e24c515ea97fd2f1bdbf62df12e"
   integrity sha512-j12Uuyb4FMrd/qQAm6uCHAkPtO8FDTRJZBDd5D2KOL2eLaz1yUNdUB/NOIyq0iU4q4cFarsUCrnFDPBcnksuOg==
