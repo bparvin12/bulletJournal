@@ -7,6 +7,8 @@ import Health from "./pages/Health";
 import Weather from "./pages/Weather";
 import CompleteChat from "./pages/Chat";
 import Login from "./pages/Login";
+import SignIn from "./components/SignIn";
+import SignUp from "./components/SignUp";
 import Menu from "./components/Menu";
 
 import "./App.css";
@@ -22,6 +24,8 @@ const App = () => (
       <Route exact path="/weather" component={Weather} />
       <Route exact path="/chat" component={CompleteChat} />
       <Route exact path="/login" component={Login} />
+      <Route exact path="/signin" component={SignIn} />
+      <Route exact path="/signup" component={SignUp} />
     </Menu>
   </Router>
 );
