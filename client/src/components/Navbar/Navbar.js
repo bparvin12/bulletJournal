@@ -9,7 +9,6 @@ import InputBase from '@material-ui/core/InputBase';
 import Badge from '@material-ui/core/Badge';
 import MenuItem from '@material-ui/core/MenuItem';
 import Menu from '@material-ui/core/Menu';
-import { fade } from '@material-ui/core/styles/colorManipulator';
 import { withStyles } from '@material-ui/core/styles';
 import MenuIcon from '@material-ui/icons/Menu';
 import SearchIcon from '@material-ui/icons/Search';
@@ -18,6 +17,8 @@ import MailIcon from '@material-ui/icons/Mail';
 import NotificationsIcon from '@material-ui/icons/Notifications';
 import MoreIcon from '@material-ui/icons/MoreVert';
 import classNames from 'classnames';
+import { Link } from 'react-router-dom';
+import WeatherWidget from "../WeatherWidget";
 
 
 class Navbar extends React.Component {
@@ -70,6 +71,8 @@ class Navbar extends React.Component {
         open={isMobileMenuOpen}
         onClose={this.handleMenuClose}
       >
+      <div className={classes.grow} />
+
         <MenuItem onClick={this.handleMobileMenuClose}>
           <IconButton color="inherit">
             <Badge badgeContent={4} color="secondary">
@@ -111,9 +114,14 @@ class Navbar extends React.Component {
             >
               <MenuIcon />
             </IconButton>
-            <Typography className={classes.title} variant="h6" color="inherit" noWrap>
-              Material-UI
+            <Typography className={classes.title} variant="h4" noWrap>
+              <Link className='nav-link' to='/'>Queue the Butler</Link>
             </Typography>
+            <div className={classes.grow} />
+              <div className={classes.weatherWidget}>
+                <WeatherWidget />
+              </div>
+            <div className={classes.grow} />
             <div className={classes.search}>
               <div className={classes.searchIcon}>
                 <SearchIcon />
@@ -125,6 +133,7 @@ class Navbar extends React.Component {
                   input: classes.inputInput,
                 }}
               />
+
             </div>
             <div className={classes.grow} />
             <div className={classes.sectionDesktop}>

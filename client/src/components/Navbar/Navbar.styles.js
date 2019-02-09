@@ -32,6 +32,7 @@ export default theme => ({
       display: 'none',
       [theme.breakpoints.up('sm')]: {
         display: 'block',
+        color: '#9e9e9e',
       },
     },
     search: {
@@ -41,7 +42,6 @@ export default theme => ({
       '&:hover': {
         backgroundColor: fade(theme.palette.common.white, 0.25),
       },
-      marginRight: theme.spacing.unit * 2,
       marginLeft: 0,
       width: '100%',
       [theme.breakpoints.up('sm')]: {
@@ -69,8 +69,11 @@ export default theme => ({
       paddingLeft: theme.spacing.unit * 10,
       transition: theme.transitions.create('width'),
       width: '100%',
-      [theme.breakpoints.up('md')]: {
+      [theme.breakpoints.up('sm')]: {
+        width: 120,
+        '&:focus': {
         width: 200,
+        },
       },
     },
     sectionDesktop: {
