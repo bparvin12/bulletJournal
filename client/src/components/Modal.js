@@ -65,7 +65,7 @@ class SimpleModal extends React.Component {
                     open={this.state.open}
                     onClose={this.handleClose}
                 >
-                    <CompleteChat style={getModalStyle()}/>
+                    <CompleteChat style={getModalStyle()} className={classes.paper}/>
                 </Modal>
             </div>
         );

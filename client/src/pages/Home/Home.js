@@ -15,6 +15,7 @@ import { Card, BottomNavigation } from '@material-ui/core';
 import Chat from "../../widgets/Chat";
 import { Link } from 'react-router-dom';
 import Typography from '@material-ui/core/Typography';
+import Stock from "../../widgets/Stock"
 
 
 const styles = theme => ({
