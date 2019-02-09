@@ -19,6 +19,10 @@ import MoreIcon from '@material-ui/icons/MoreVert';
 import classNames from 'classnames';
 import { Link } from 'react-router-dom';
 import WeatherWidget from "../WeatherWidget";
+// import { Link as RouterLink } from 'react-router-dom'
+import { Modal } from '@material-ui/core';
+// import Link from '@material-ui/core/Link';
+import SimpleModalWrapped from "../Modal"
 
 
 class Navbar extends React.Component {
@@ -71,7 +75,7 @@ class Navbar extends React.Component {
         open={isMobileMenuOpen}
         onClose={this.handleMenuClose}
       >
-      <div className={classes.grow} />
+        <div className={classes.grow} />
 
         <MenuItem onClick={this.handleMobileMenuClose}>
           <IconButton color="inherit">
@@ -99,11 +103,11 @@ class Navbar extends React.Component {
     );
 
     return (
-        <AppBar className={classNames(classes.appBar, {
-          [classes.appBarShift]: this.props.open,
-          })} position="fixed">
+      <AppBar className={classNames(classes.appBar, {
+        [classes.appBarShift]: this.props.open,
+      })} position="fixed">
 
-          <Toolbar>
+        <Toolbar>
           <IconButton
             color="inherit"
             aria-label="Open drawer"
@@ -111,60 +115,56 @@ class Navbar extends React.Component {
             className={classNames(classes.menuButton, {
               [classes.hide]: this.props.open,
             })}
-            >
-              <MenuIcon />
-            </IconButton>
-            <Typography className={classes.title} variant="h4" noWrap>
-              <Link className='nav-link' to='/'>Queue the Butler</Link>
-            </Typography>
-            <div className={classes.grow} />
-              <div className={classes.weatherWidget}>
-                <WeatherWidget />
-              </div>
-            <div className={classes.grow} />
-            <div className={classes.search}>
-              <div className={classes.searchIcon}>
-                <SearchIcon />
-              </div>
-              <InputBase
-                placeholder="Search…"
-                classes={{
-                  root: classes.inputRoot,
-                  input: classes.inputInput,
-                }}
-              />
+          >
+            <MenuIcon />
+          </IconButton>
+          <Typography className={classes.title} variant="h4" noWrap>
+            <Link className='nav-link' to='/'>Queue the Butler</Link>
+          </Typography>
+          <div className={classes.grow} />
+          <div className={classes.weatherWidget}>
+            <WeatherWidget />
+          </div>
+          <div className={classes.grow} />
+          <div className={classes.search}>
+            <div className={classes.searchIcon}>
+              <SearchIcon />
+            </div>
+            <InputBase
+              placeholder="Search…"
+              classes={{
+                root: classes.inputRoot,
+                input: classes.inputInput,
+              }}
+            />
 
-            </div>
-            <div className={classes.grow} />
-            <div className={classes.sectionDesktop}>
-              <IconButton color="inherit">
-                <Badge badgeContent={4} color="secondary">
-                  <MailIcon />
-                </Badge>
-              </IconButton>
-              <IconButton color="inherit">
-                <Badge badgeContent={17} color="secondary">
-                  <NotificationsIcon />
-                </Badge>
-              </IconButton>
-              <IconButton
-                aria-owns={isMenuOpen ? 'material-appbar' : undefined}
-                aria-haspopup="true"
-                onClick={this.handleProfileMenuOpen}
-                color="inherit"
-              >
-                <AccountCircle />
-              </IconButton>
-            </div>
-            <div className={classes.sectionMobile}>
-              <IconButton aria-haspopup="true" onClick={this.handleMobileMenuOpen} color="inherit">
-                <MoreIcon />
-              </IconButton>
-            </div>
-          </Toolbar>
+          </div>
+          <div className={classes.grow} />
+          <div className={classes.sectionDesktop}>
+            <IconButton color="inherit">
+              <Badge badgeContent={4} color="secondary">
+                <MailIcon />
+              </Badge>
+            </IconButton>
+            <SimpleModalWrapped />
+            <IconButton
+              aria-owns={isMenuOpen ? 'material-appbar' : undefined}
+              aria-haspopup="true"
+              onClick={this.handleProfileMenuOpen}
+              color="inherit"
+            >
+              <AccountCircle />
+            </IconButton>
+          </div>
+          <div className={classes.sectionMobile}>
+            <IconButton aria-haspopup="true" onClick={this.handleMobileMenuOpen} color="inherit">
+              <MoreIcon />
+            </IconButton>
+          </div>
+        </Toolbar>
         {renderMenu}
         {renderMobileMenu}
-        </AppBar>
+      </AppBar>
     );
   }
 }
