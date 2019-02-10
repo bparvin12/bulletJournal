@@ -124,7 +124,7 @@ function CenteredGrid(props) {
             <CompleteCalc />
           </Paper>
         </Grid>
-        <Grid item xs={4}>
+        <Grid item xs={5}>
           <Paper className={classes.paper}>
             <WeatherCard />
           </Paper>
