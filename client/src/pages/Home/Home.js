@@ -15,7 +15,8 @@ import { Card, BottomNavigation } from '@material-ui/core';
 import Chat from "../../widgets/Chat";
 import { Link } from 'react-router-dom';
 import Typography from '@material-ui/core/Typography';
-import Stock from "../../widgets/Stock"
+import Stock from "../../widgets/Stock";
+import CompleteCalc from "../../components/Calculator/CompleteCalc";
 
 
 const styles = theme => ({
@@ -114,6 +115,11 @@ function CenteredGrid(props) {
         </Grid>
         <Grid item xs={6}>
           <Paper className={classes.paper}>Data Table (Goal Status/Checkpoints/Motivation) Placeholder</Paper>
+        </Grid>
+
+        {/* Fifth Row */}
+        <Grid item xs={4}>
+          <CompleteCalc />
         </Grid>
       </Grid>
     </div>
