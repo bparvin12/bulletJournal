@@ -109,8 +109,7 @@ function CenteredGrid(props) {
 
   {/* Fourth Row With the two Grid Tiles: To do list, MISC List */}       
         <Grid item xs={6}>
-          {/* <Paper className={classes.paper}>To Do List Placeholder</Paper> */}
-          <TodosWidget />
+          <Paper className={classes.paper}><TodosWidget /></Paper>
         </Grid>
         <Grid item xs={6}>
           <Paper className={classes.paper}>Data Table (Goal Status/Checkpoints/Motivation) Placeholder</Paper>
