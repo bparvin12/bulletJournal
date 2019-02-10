@@ -14,7 +14,7 @@ import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
 import InboxIcon from '@material-ui/icons/MoveToInbox';
 import MailIcon from '@material-ui/icons/Mail';
-import Nav from "../Nav";
+import Navbar from "../Navbar";
 import styles from "./Menu.styles";
 
 
@@ -37,7 +37,7 @@ class Menu extends React.Component {
     return (
       <div className={classes.root}>
         <CssBaseline />
-        <Nav open={this.state.open} handleDrawerOpen={this.handleDrawerOpen} />
+        <Navbar open={this.state.open} handleDrawerOpen={this.handleDrawerOpen} />
         <Drawer
           variant="permanent"
           className={classNames(classes.drawer, {

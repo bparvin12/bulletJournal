@@ -12,7 +12,7 @@ class RoomList extends React.Component {
                         return (
                             <p key={room.id} className={"room " + active}>
                                 <button 
-                                    className="btn btn-success"  
+                                    className="btn btn-danger"  
                                     onClick={() => { this.props.subscribeToRoom(room.id) }} 
                                     href="#">
                                     {room.name}</button>

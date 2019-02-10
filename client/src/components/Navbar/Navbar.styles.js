@@ -3,6 +3,7 @@ const drawerWidth = 240;
 
 export default theme => ({
     appBar: {
+      backgroundColor: "",
       zIndex: theme.zIndex.drawer + 1,
       transition: theme.transitions.create(['width', 'margin'], {
         easing: theme.transitions.easing.sharp,
@@ -27,13 +28,11 @@ export default theme => ({
       marginLeft: -12,
       marginRight: 20,
     },
-    // hide: {
-    //   display: 'none',
-    // },
     title: {
       display: 'none',
       [theme.breakpoints.up('sm')]: {
         display: 'block',
+        color: '#9e9e9e',
       },
     },
     search: {
@@ -43,11 +42,10 @@ export default theme => ({
       '&:hover': {
         backgroundColor: fade(theme.palette.common.white, 0.25),
       },
-      marginRight: theme.spacing.unit * 2,
       marginLeft: 0,
       width: '100%',
       [theme.breakpoints.up('sm')]: {
-        mmarginLeft: theme.spacing.unit * 3,
+        marginLeft: theme.spacing.unit * 3,
         width: 'auto',
       },
     },
@@ -71,8 +69,11 @@ export default theme => ({
       paddingLeft: theme.spacing.unit * 10,
       transition: theme.transitions.create('width'),
       width: '100%',
-      [theme.breakpoints.up('md')]: {
+      [theme.breakpoints.up('sm')]: {
+        width: 120,
+        '&:focus': {
         width: 200,
+        },
       },
     },
     sectionDesktop: {
@@ -87,5 +88,4 @@ export default theme => ({
         display: 'none',
       },
     },
-
-});
+  });
