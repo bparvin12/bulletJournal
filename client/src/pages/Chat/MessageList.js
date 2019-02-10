@@ -21,7 +21,7 @@ class MessageList extends React.Component {
         if (!this.props.roomId) {
             return(
                 <div className="join-a-room">
-                    <div className="align-middle alert alert-info">
+                    <div className="align-middle alert alert-danger">
                         &larr; Join a room!
                     </div>
                 </div>

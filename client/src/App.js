@@ -14,8 +14,14 @@ import { createStore } from 'redux';
 import { Provider } from 'react-redux';
 import reducers from './reducers';
 
+import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles';
 import "./App.css";
 
+const theme = createMuiTheme({
+  palette: {
+    type: 'dark',
+  },
+});
 
 const App = () => (
   <Provider store={ createStore(reducers, {})}>
@@ -34,9 +40,6 @@ const App = () => (
     </Router>
 </Provider>
 );
-
-
-
 
 
 export default App;
