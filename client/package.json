@@ -17,6 +17,7 @@
     "date-fns": "2.0.0-alpha.21",
     "dateformat": "^3.0.3",
     "material-ui-pickers": "^2.1.2",
+    "mathjs": "^5.4.2",
     "react": "^16.7.0",
     "react-chartjs-2": "^2.7.4",
     "react-dom": "^16.7.0",
