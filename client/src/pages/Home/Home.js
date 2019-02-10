@@ -16,7 +16,7 @@ import Chat from "../../widgets/Chat";
 import { Link } from 'react-router-dom';
 import Typography from '@material-ui/core/Typography';
 import Stock from "../../widgets/Stock";
-import CompleteCalc from "../../components/Calculator/CompleteCalc";
+import CompleteCalc from "../../components/Calculator/CompleteCalc.jsx";
 
 
 const styles = theme => ({
@@ -117,8 +117,17 @@ function CenteredGrid(props) {
         </Grid>
 
         {/* Fifth Row */}
-        <Grid item xs={4}>
+        <Grid item xs={3}>
           <CompleteCalc />
+        </Grid>
+        <Grid item xs={3}>
+          
+        </Grid>
+        <Grid item xs={3}>
+          
+        </Grid>
+        <Grid item xs={3}>
+          
         </Grid>
       </Grid>
     </div>
