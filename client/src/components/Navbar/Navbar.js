@@ -142,8 +142,9 @@ class Navbar extends React.Component {
           >
             <MenuIcon />
           </IconButton>
-          <Typography className={classes.title} variant="h4" noWrap>
-            <Link className='nav-link' to='/'>Queue the Butler</Link>
+          <Typography className={classes.title} variant="h2" color="inherit" noWrap>
+            {/* <Link className='nav-link' to='/'>"Q" the Butler</Link> */}
+            "Q" the Butler
           </Typography>
           <div className={classes.grow} />
           <div className={classes.weatherWidget}>
