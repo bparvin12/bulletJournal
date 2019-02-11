@@ -16,9 +16,6 @@ import AccountCircle from '@material-ui/icons/AccountCircle';
 import MailIcon from '@material-ui/icons/Mail';
 import NotificationsIcon from '@material-ui/icons/Notifications';
 import MoreIcon from '@material-ui/icons/MoreVert';
-<<<<<<< HEAD
-import { Link } from 'react-router-dom';
-=======
 import classNames from 'classnames';
 import { Link } from 'react-router-dom';
 import WeatherWidget from "../WeatherWidget";
@@ -26,7 +23,6 @@ import WeatherWidget from "../WeatherWidget";
 import { Modal } from '@material-ui/core';
 // import Link from '@material-ui/core/Link';
 import SimpleModalWrapped from "../Modal"
->>>>>>> 8ce885fe35149249ae46efac51d13d2be21a843a
 
 
 class Navbar extends React.Component {
@@ -66,8 +62,10 @@ class Navbar extends React.Component {
         open={isMenuOpen}
         onClose={this.handleMenuClose}
       >
-        <MenuItem onClick={this.handleMenuClose}>Profile</MenuItem>
+        <MenuItem onClick={this.handleMenuClose}>Profile!</MenuItem>
         <MenuItem onClick={this.handleMenuClose}>My account</MenuItem>
+        <MenuItem><Link className='nav-link' to='/signin'>Sign In</Link></MenuItem>
+        <MenuItem><Link className='nav-link' to='/signup'>Sign Up</Link></MenuItem>
       </Menu>
     );
 

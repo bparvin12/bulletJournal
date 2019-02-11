@@ -10,7 +10,8 @@ import Login from "./pages/Login";
 import SignIn from "./components/SignIn";
 import SignUp from "./components/SignUp";
 import Menu from "./components/Menu";
-import { createStore } from 'redux';
+import { createStore, applyMiddleware } from 'redux';
+import reduxThunk from 'redux-thunk'; 
 import { Provider } from 'react-redux';
 import reducers from './reducers';
 
@@ -24,7 +25,7 @@ const theme = createMuiTheme({
 });
 
 const App = () => (
-  <Provider store={ createStore(reducers, {})}>
+  <Provider store={ createStore(reducers, {}, applyMiddleware(reduxThunk))}>
       <Router>
       <Menu>
         <Route exact path="/" component={Home} />
