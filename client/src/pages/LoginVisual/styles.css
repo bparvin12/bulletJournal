@@ -1,7 +1,8 @@
 .Menu-root-1 {
     background-color: white !important;
-    background-image: url("./Images/BG1.jpg") !important;
+    background-image: url("./Images/BG2.jpg") !important;
     height: 100vh !important;
+    width: 100vw !important;
     background-size: cover !important;
 }
 .style-input {
@@ -15,10 +16,10 @@
 .style-input::placeholder{
     color: white !important;
 }
-.container{
+/* .container{
     width: 70%;
     margin-top: 30px;
-}
+} */
 h1{
     color: #ffffff;
     font-size: 90px;
