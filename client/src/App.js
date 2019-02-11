@@ -9,6 +9,7 @@ import CompleteChat from "./pages/Chat";
 import Login from "./pages/Login";
 import SignIn from "./components/SignIn";
 import SignUp from "./components/SignUp";
+import Member from "./components/Member";
 import Menu from "./components/Menu";
 import { createStore, applyMiddleware } from 'redux';
 import reduxThunk from 'redux-thunk'; 
@@ -24,8 +25,16 @@ const theme = createMuiTheme({
   },
 });
 
+const jwtToken = localStorage.getItem('JWT_TOKEN');
+
 const App = () => (
-  <Provider store={ createStore(reducers, {}, applyMiddleware(reduxThunk))}>
+  <Provider store={ createStore(reducers, {
+    // keep auth state when signed in
+    auth: {
+      token: jwtToken,
+      isAuthenticated: jwtToken ? true : false
+    }
+  }, applyMiddleware(reduxThunk))}>
       <Router>
       <Menu>
         <Route exact path="/" component={Home} />
@@ -37,6 +46,7 @@ const App = () => (
         <Route exact path="/login" component={Login} />
         <Route exact path="/signin" component={SignIn} />
         <Route exact path="/signup" component={SignUp} />
+        <Route exact path="/member" component={Member} />
       </Menu>
     </Router>
 </Provider>

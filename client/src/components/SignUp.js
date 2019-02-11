@@ -7,6 +7,7 @@ import * as actions from '../actions';
 
 
 import LoginInput from './Inputs/LoginInput';
+import { isThursdayWithOptions } from 'date-fns/esm/fp';
 
 class SignUp extends Component {
     constructor(props){
@@ -18,6 +19,10 @@ class SignUp extends Component {
         console.log('formData: ', formData)
         // call action to backend here?
         await this.props.signUp(formData)
+        // get to Member page
+        if(!this.props.errorMessage){
+            this.props.history.push('/member')
+        }
     }
 
 render() {
@@ -42,6 +47,11 @@ render() {
                     component='input' />   
             </fieldset>
 
+            { this.props.errorMessage ?
+                <div>
+                    { this.props.errorMessage }
+                </div>  : null }
+
             <button type="submit">Sign Up
                 {/* <span class="MuiButton-label-429">Sign Up</span>
                 <span class="MuiTouchRipple-root-312"></span> */}
@@ -52,12 +62,18 @@ render() {
 
         </div>
 
-    );
+        );
+    }
 }
+
+function mapStateToProps(state) {
+    return {
+        errorMessage: state.auth.errorMessage
+    }
 
 }
 
 export default compose(
-    connect(null, actions),
+    connect(mapStateToProps, actions),
     reduxForm({ form: 'signup' })
     )(SignUp) ;
