@@ -93,7 +93,7 @@ function CenteredGrid(props) {
         <Grid item xs={4}>
           <Paper className={classes.paper}>
           <Typography className={classes.title} variant="h4" align="left" color='primary' noWrap>
-              <Link className='health-link' to='../Health/Health.js'>Health Sats:</Link>
+              <Link className='health-link' to='../Health/Health.js'>Health Stats:</Link>
           </Typography>
           <BarChart height="340"/>
           </Paper>
