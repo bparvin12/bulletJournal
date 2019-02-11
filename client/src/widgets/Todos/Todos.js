@@ -34,7 +34,6 @@ const Todos = (props) => {
  
 export default withStyles(styles)(Todos);
 
-
 // import React from "react";
 // import { withStyles } from '@material-ui/core/styles';
 // import styles from './Todos.styles';
