@@ -9,6 +9,7 @@ import dog from "./Images/BG1.jpg"
 const LoginVisual = (props) => {
     const { classes } = props;
     return (
+        // <div className="container">
         <div className="container">
             {/* <h1>Q</h1> */}
             {/* <h1 className="flip-horizontal-fwd">Q</h1> */}
