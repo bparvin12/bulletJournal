@@ -1580,7 +1580,6 @@ core-util-is@~1.0.0:
   resolved "https://registry.yarnpkg.com/core-util-is/-/core-util-is-1.0.2.tgz#b5fd54220aa2bc5ab57aab7140c940754503c1a7"
   integrity sha1-tf1UIgqivFq1eqtxQMlAdUUDwac=
 
-<<<<<<< HEAD
 cors@^2.8.5:
   version "2.8.5"
   resolved "https://registry.yarnpkg.com/cors/-/cors-2.8.5.tgz#eac11da51592dd86b9f06f6e7ac293b3df875d29"
@@ -1588,7 +1587,6 @@ cors@^2.8.5:
   dependencies:
     object-assign "^4"
     vary "^1"
-=======
 cosmiconfig@^5.0.5:
   version "5.0.7"
   resolved "https://registry.yarnpkg.com/cosmiconfig/-/cosmiconfig-5.0.7.tgz#39826b292ee0d78eda137dfa3173bd1c21a43b04"
@@ -1598,7 +1596,6 @@ cosmiconfig@^5.0.5:
     is-directory "^0.3.1"
     js-yaml "^3.9.0"
     parse-json "^4.0.0"
->>>>>>> a570df8a492bd4eec05b041e3fbb4aeb534c2bed
 
 create-error-class@^3.0.0:
   version "3.0.2"
@@ -3978,11 +3975,7 @@ number-is-nan@^1.0.0:
   resolved "https://registry.yarnpkg.com/number-is-nan/-/number-is-nan-1.0.1.tgz#097b602b53422a522c1afb8790318336941a011d"
   integrity sha1-CXtgK1NCKlIsGvuHkDGDNpQaAR0=
 
-<<<<<<< HEAD
-object-assign@^4, object-assign@^4.1.0, object-assign@^4.1.1:
-=======
 object-assign@^4.0.1, object-assign@^4.1.0, object-assign@^4.1.1:
->>>>>>> a570df8a492bd4eec05b041e3fbb4aeb534c2bed
   version "4.1.1"
   resolved "https://registry.yarnpkg.com/object-assign/-/object-assign-4.1.1.tgz#2109adc7965887cfc05cbbd442cac8bfbb360863"
   integrity sha1-IQmtx5ZYh8/AXLvUQsrIv7s2CGM=
