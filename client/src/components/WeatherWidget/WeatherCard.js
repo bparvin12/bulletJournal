@@ -4,18 +4,20 @@ import React from "react";
 
 const styles = {
     div: {
-        display: "flex",
-        width: "100%%"
+        display: "absolute",
+        width: "100%",
+        height: "100%"
     },
     iframe: {
-        display: "flex",
-        width: "100%"
+        display: "absolute",
+        width: "100%",
+        height: "100%"
     },
     a: {
         textIndent: "-9999em",
         display: "flex",
         margin: "-20px 0 0 0",
-        height: "20px",
+        height: "100%",
         zIndex: "1",
         position: "relative"
     }

@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter as Router, Route } from "react-router-dom";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Home from "./pages/Home";
 import Finance from "./pages/Finance";
 import Goals from "./pages/Goals";
@@ -18,6 +18,7 @@ import reducers from './reducers';
 
 import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles';
 import "./App.css";
+import Error from "./components/Error"
 
 const theme = createMuiTheme({
   palette: {
@@ -35,8 +36,10 @@ const App = () => (
       isAuthenticated: jwtToken ? true : false
     }
   }, applyMiddleware(reduxThunk))}>
+  <MuiThemeProvider theme={theme}>
       <Router>
       <Menu>
+        <Switch>
         <Route exact path="/" component={Home} />
         <Route exact path="/finance" component={Finance} />
         <Route exact path="/goals" component={Goals} />
@@ -47,10 +50,14 @@ const App = () => (
         <Route exact path="/signin" component={SignIn} />
         <Route exact path="/signup" component={SignUp} />
         <Route exact path="/member" component={Member} />
+        <Route component={Error} />
+        </Switch>
       </Menu>
     </Router>
+    </MuiThemeProvider>
 </Provider>
-);
+)
+
 
 
 export default App;
