@@ -211,3 +211,8 @@ export class Auth extends React.Component {
 };
 
 export default withStyles(styles)(Navbar);
+
+// export default compose(
+//   connect(mapStateToProps, actions),
+//   reduxForm({ form: 'signin' })
+//   )(SignIn)
