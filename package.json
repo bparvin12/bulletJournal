@@ -38,6 +38,7 @@
     "passport": "^0.4.0",
     "passport-jwt": "^4.0.0",
     "passport-local": "^1.0.0",
-    "react-chartjs-2": "^2.7.4"
+    "react-chartjs-2": "^2.7.4",
+    "react-native": "^0.58.4"
   }
 }
