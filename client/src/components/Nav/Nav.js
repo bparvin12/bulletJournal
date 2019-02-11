@@ -13,10 +13,7 @@ import AccountIcon from "../AccountIcon";
 import { withStyles } from '@material-ui/core/styles';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
-<<<<<<< HEAD
-=======
 import MoreIcon from '@material-ui/icons/MoreVert';
->>>>>>> 8ce885fe35149249ae46efac51d13d2be21a843a
 
 const Nav = props => {
     const { classes } = props;
@@ -37,13 +34,8 @@ const Nav = props => {
     >
         <MenuIcon />
     </IconButton>
-<<<<<<< HEAD
     <Typography variant="h2" color="inherit" noWrap>
     <Link className='nav-link' to='/'>Q The Butler</Link>
-=======
-    <Typography className={classes.title} variant="h2" color="inherit" align="left" noWrap>
-        <Link className='nav-link' to='/'>Queue The Butler</Link>
->>>>>>> 8ce885fe35149249ae46efac51d13d2be21a843a
     </Typography>
 
     <div className={classes.search}>
