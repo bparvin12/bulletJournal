@@ -24,6 +24,7 @@
     "bcryptjs": "^2.4.3",
     "body-parser": "^1.18.3",
     "chart.js": "^2.7.3",
+    "cors": "^2.8.5",
     "express": "^4.16.3",
     "express-promise-router": "^3.0.3",
     "express-router-promise": "^1.0.7",
