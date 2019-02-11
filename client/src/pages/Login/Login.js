@@ -1,53 +1,34 @@
+// const users = require("../../routes/users");
 
-        function login() 
-        {
-          var myParams = {
-            'clientid' : '560097597882-0s4henth74aj1d62ronah6arsivf47sb.apps.googleusercontent.com.apps.googleusercontent.com',
-            'cookiepolicy' : 'single_host_origin',
-            'callback' : 'loginCallback',
-            'approvalprompt':'force',
-            'scope' : 'https://www.googleapis.com/auth/plus.login https://www.googleapis.com/auth/plus.profile.emails.read'
-          };
-          gapi.auth.signIn(myParams);
-        }
+//         function login(email, password) 
+//         {
+//             return console.log('<h1> Login Page </h1>');
+          
+//         };
 
-        function loginCallback(result)
-        {
-            if(result['status']['signed_in'])
-            {
-                var request = gapi.client.plus.people.get(
-                {
-                    'userId': 'me'
-                });
-                request.execute(function (resp)
-                {
-                    /* console.log(resp);
-                    console.log(resp['id']); */
-                    var email = '';
-                    if(resp['emails'])
-                    {
-                        for(i = 0; i < resp['emails'].length; i++)
-                        {
-                            if(resp['emails'][i]['type'] == 'account')
-                            {
-                                email = resp['emails'][i]['value'];//here is required email id
-                            }
-                        }
-                    }
-                   var usersname = resp['displayName'];//required name
-                });
-            }
-        }
-        function onLoadCallback()
-        {
-            gapi.client.setApiKey('YOUR_API_KEY');
-            gapi.client.load('plus', 'v1',function(){});
-        }
+import React from "react";
+import PropTypes from 'prop-types';
+import { withStyles } from '@material-ui/core/styles';
+import styles from './Login.styles';
+import Button from '@material-ui/core/Button';
 
-           
-              (function() {
-               var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
-               po.src = 'https://apis.google.com/js/client.js?onload=onLoadCallback';
-               var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
-             })();
+
+const Login = (props) => {
+    const { classes } = props;
+    return (
+        <div>
+            <h1 className={classes.input}>THIS IS Login Page!!</h1>
+            <Button variant="contained" className={classes.button}>
+                Login
+           </Button>
+        </div>
+    )
+}
+
+Login.propTypes = {
+  classes: PropTypes.object.isRequired,
+};
+
+ 
+export default withStyles(styles)(Login);
        

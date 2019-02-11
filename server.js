@@ -5,6 +5,8 @@ const app = express();
 const morgan = require ('morgan');
 const bodyParser = require ('body-parser');
 const mongoose = require ('mongoose');
+const cors = require('cors');
+
 
 mongoose.Promise = global.Promise;
 mongoose.connect('mongodb://localhost/APIAuthentication');
@@ -17,6 +19,7 @@ app.use(express.json());
 // Auth
 app.use(morgan('dev'));
 app.use(bodyParser.json());
+app.use(cors());
 
 // Serve up static assets (usually on heroku)
 if (process.env.NODE_ENV === "production") {
