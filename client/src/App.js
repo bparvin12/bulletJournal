@@ -18,11 +18,10 @@ const theme = createMuiTheme({
 });
 
 const App = () => (
-
-  <Router>
-    <Switch>
-      <MuiThemeProvider theme={theme}>
-        <Menu>
+  <MuiThemeProvider theme={theme}>
+    <Router>
+      <Menu>
+        <Switch>
           <Route exact path="/" component={Home} />
           <Route exact path="/finance" component={Finance} />
           <Route exact path="/goals" component={Goals} />
@@ -30,11 +29,10 @@ const App = () => (
           <Route exact path="/weather" component={Weather} />
           <Route exact path="/chat" component={CompleteChat} />
           <Route component={Error} />
-        </Menu>
-      </MuiThemeProvider>
-    </Switch>
-  </Router>
-
+        </Switch>
+      </Menu>
+    </Router>
+  </MuiThemeProvider>
 );
 
 
