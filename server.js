@@ -35,6 +35,7 @@ app.get("/login", (req, res) => {
 
 //Auth
 app.use('/users', require("./routes/users"));
+app.use('/calorietrackers', require("./routes/calorietrackers"));
 
 // Send every other request to the React app
 // Define any API routes before this runs. "*" Opens up every other route besides all the routes that have been defined. 
