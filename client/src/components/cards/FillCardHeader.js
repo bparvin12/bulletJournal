@@ -15,7 +15,7 @@ const FillCardHeader = props => {
                     {props.title}
                 </Typography>
                 <div>
-                    <InputDialogue icon={props.icon} dbCollection="queuedb" title = {props.title}>{props.children}</InputDialogue>
+                    <InputDialogue icon={props.icon} dbCollection="" title = {props.title}>{props.children}</InputDialogue>
                 </div>
             </Toolbar>
         </div>

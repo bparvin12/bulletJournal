@@ -5,9 +5,12 @@ const app = express();
 const morgan = require ('morgan');
 const bodyParser = require ('body-parser');
 const mongoose = require ('mongoose');
+const moment = require('moment');
 
+
+const QueueTheButlerDB = "APIAuthentication"; // we might want to rename the database name
 mongoose.Promise = global.Promise;
-mongoose.connect('mongodb://localhost/APIAuthentication');
+mongoose.connect('mongodb://localhost/' + QueueTheButlerDB);  // We might need to rename this
 
 
 // Define middleware here
@@ -23,24 +26,16 @@ if (process.env.NODE_ENV === "production") {
   app.use(express.static("client/build"));
 }
 
-// Database configuration
-// Save the URL of our database as well
-const databaseUrl="QueueTheButler";
-let collection = [];
 
-// ============================================================================
-// Should I use let or const here if ideally, the user can add their own new 
-//  tables?
-// ----------------------------------------------------------------------------
-// USe mongojs to hook to database to the db variable
-let db = mongojs(databaseUrl, collection);
-// ============================================================================
-// ----------------------------------------------------------------------------
+// Use mongooose to hook to database to the db variable
+const db = mongoose.connection;
 
 //This makes sure that any errors are logged if mongodb runs into an issue
-db.on ("error", function(error)) {
-  console.log("Database Error: ", error):
-}):
+db.on('error', console.error.bind(console, 'connection error:'));
+ 
+db.once('open', function() {
+  console.log("Connection Successful!");
+}); 
 
 // Define API routes here
 

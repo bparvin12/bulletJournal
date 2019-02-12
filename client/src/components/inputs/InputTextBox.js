@@ -41,26 +41,24 @@ const InputTextBox = props => {
     const { classes } = props;
 
     return (
-        <div className={classes.root}>
-            <FormControl className={classes.margin}>
-                <InputLabel
-                    htmlFor="custom-css-standard-input"
-                    classes={{
-                        root: classes.cssLabel,
-                        focused: classes.cssFocused,
-                    }}
-                >
-                    {props.label}
-                </InputLabel>
-                <Input
-                    id="custom-css-standard-input"
-                    className = {props.inputClass}
-                    classes={{
-                        underline: classes.cssUnderline,
-                    }}
-                />
-            </FormControl>
-        </div>  
+        <FormControl className={classes.formControl}>
+            <InputLabel
+                htmlFor="custom-css-standard-input"
+                classes={{
+                    root: classes.cssLabel,
+                    focused: classes.cssFocused,
+                }}
+            >
+                {props.label}
+            </InputLabel>
+            <Input
+                id="custom-css-standard-input"
+                className={props.inputClass}
+                classes={{
+                    underline: classes.cssUnderline,
+                }}
+            />
+        </FormControl>
     );
 }
 

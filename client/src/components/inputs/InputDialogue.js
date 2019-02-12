@@ -18,13 +18,6 @@ class InputDialogue extends React.Component {
     this.setState({ open: false });
   };
 
-  handleAddClose = () =>{
-
-
-
-    this.setState({ open: false});
-
-  }
 
   render() {
     console.log(this.props.title);
@@ -49,14 +42,14 @@ class InputDialogue extends React.Component {
               </IconButton>
             </Typography>
           </DialogTitle>
-          <DialogContent>
+          <DialogContent onClick={this.handleClose}>
             {this.props.children}
           </DialogContent>
-          <DialogActions>
+          {/* <DialogActions>
             <Button onClick={this.handleAddClose} color="primary">
               ADD
             </Button>
-          </DialogActions>
+          </DialogActions> */}
         </Dialog>
       </div>
     );
