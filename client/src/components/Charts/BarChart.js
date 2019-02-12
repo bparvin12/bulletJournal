@@ -11,12 +11,12 @@ class BarChart extends Component {
                     {
                         label: 'Goals Achieved',
                         data: [
-                            17508009,
-                            19107009,
-                            16095009,
-                            14486903,
-                            17107009,
-                            15107009,
+                            11667,
+                            12009,
+                            14509,
+                            14903,
+                            17009,
+                            15009,
                         ],
                         backgroundColor:[
                             'rgba(0, 0, 255, 1)',

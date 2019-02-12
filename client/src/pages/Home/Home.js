@@ -90,7 +90,7 @@ function CenteredGrid(props) {
             <Typography className={classes.title} variant="h4" align="left" color='primary' noWrap>
               <Link className='todolist-link' to='../Todos/Todos.js'>Task Completion:</Link>
             </Typography>
-            <LineChart height="400" />
+            <LineChart height="360" />
           </Paper>
         </Grid>
         <Grid item xs={4}>
