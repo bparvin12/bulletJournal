@@ -78,8 +78,8 @@ class Navbar extends React.Component {
         <MenuItem onClick={this.handleMenuClose}>Profile</MenuItem>
         <MenuItem onClick={this.handleMenuClose}>My account</MenuItem>
         { !this.props.isAuth ?
-          [<MenuItem><Link className='nav-link' to='/signin'>Sign In</Link></MenuItem>,
-          <MenuItem><Link className='nav-link' to='/signup'>Sign Up</Link></MenuItem>]
+          [<MenuItem><Link className='nav-link' to='/'>Sign In</Link></MenuItem>,
+          <MenuItem><Link className='nav-link' to='/'>Sign Up</Link></MenuItem>]
         : null
         }
 
