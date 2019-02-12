@@ -1,4 +1,5 @@
 import { fade } from '@material-ui/core/styles/colorManipulator';
+import { Link } from '@material-ui/core';
 const drawerWidth = 240;
 
 export default theme => ({
@@ -28,11 +29,14 @@ export default theme => ({
       marginLeft: -12,
       marginRight: 20,
     },
+    Link: {
+      textColor: 'white',
+    },
     title: {
       display: 'none',
+      color: 'white',
       [theme.breakpoints.up('sm')]: {
         display: 'block',
-        color: '#9e9e9e',
       },
     },
     search: {

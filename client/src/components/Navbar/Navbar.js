@@ -22,10 +22,18 @@ import WeatherWidget from "../WeatherWidget";
 // import { Link as RouterLink } from 'react-router-dom'
 import { Modal } from '@material-ui/core';
 // import Link from '@material-ui/core/Link';
-import SimpleModalWrapped from "../Modal"
+import SimpleModalWrapped from "../Modal";
+import { connect } from 'react-redux';
+// import { signOut } from '../../actions';
+import * as actions from '../../actions';
 
 
 class Navbar extends React.Component {
+  constructor(props) {
+    super(props);
+    this.signOut = this.signOut.bind(this);
+  }
+
   state = {
     anchorEl: null,
     mobileMoreAnchorEl: null,
@@ -48,6 +56,11 @@ class Navbar extends React.Component {
     this.setState({ mobileMoreAnchorEl: null });
   };
 
+  signOut() {
+    console.log('sign out initiated')
+    this.props.signOut()
+  };
+
   render() {
     const { anchorEl, mobileMoreAnchorEl } = this.state;
     const { classes } = this.props;
@@ -64,6 +77,17 @@ class Navbar extends React.Component {
       >
         <MenuItem onClick={this.handleMenuClose}>Profile</MenuItem>
         <MenuItem onClick={this.handleMenuClose}>My account</MenuItem>
+        { !this.props.isAuth ?
+          [<MenuItem><Link className='nav-link' to='/signin'>Sign In</Link></MenuItem>,
+          <MenuItem><Link className='nav-link' to='/signup'>Sign Up</Link></MenuItem>]
+        : null
+        }
+
+        { this.props.isAuth ?
+          <MenuItem><Link className='nav-link' to='/signout' onClick={this.signOut} >Sign Out</Link></MenuItem>
+          : null
+        }
+
       </Menu>
     );
 
@@ -118,8 +142,9 @@ class Navbar extends React.Component {
           >
             <MenuIcon />
           </IconButton>
-          <Typography className={classes.title} variant="h4" noWrap>
-            <Link className='nav-link' to='/'>Queue the Butler</Link>
+          <Typography className={classes.title} variant="h2" color="inherit" noWrap>
+            {/* <Link className='nav-link' to='/'>"Q" the Butler</Link> */}
+            "Q" the Butler
           </Typography>
           <div className={classes.grow} />
           <div className={classes.weatherWidget}>
@@ -173,4 +198,22 @@ Navbar.propTypes = {
   classes: PropTypes.object.isRequired,
 };
 
+export class Auth extends React.Component {
+  render() {
+    return (
+      function mapStateToProps(state) {
+        return (
+    
+          state = {isAuth: state.auth.isAuthenticated}
+          
+        )
+      }
+    )}
+};
+
 export default withStyles(styles)(Navbar);
+
+// export default compose(
+//   connect(mapStateToProps, actions),
+//   reduxForm({ form: 'signin' })
+//   )(SignIn)

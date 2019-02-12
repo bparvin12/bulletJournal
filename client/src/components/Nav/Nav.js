@@ -34,8 +34,8 @@ const Nav = props => {
     >
         <MenuIcon />
     </IconButton>
-    <Typography className={classes.title} variant="h2" color="inherit" align="left" noWrap>
-        <Link className='nav-link' to='/'>Queue The Butler</Link>
+    <Typography variant="h2" color="inherit" noWrap>
+    <Link className='nav-link' to='/'>Q The Butler</Link>
     </Typography>
 
     <div className={classes.search}>
