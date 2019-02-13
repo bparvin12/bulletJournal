@@ -8,9 +8,8 @@ class RoomList extends React.Component {
             <div className="rooms-list">
                 <h2 className="communities">Communities:</h2>
                     {orderedRooms.map(room => {
-                        const active = this.props.roomId === room.id ? "active" : "";
                         return (
-                            <p key={room.id} className={"room " + active}>
+                            <p key={room.id} className="room">
                                 <button 
                                     className="btn btn-danger"  
                                     onClick={() => { this.props.subscribeToRoom(room.id) }} 
