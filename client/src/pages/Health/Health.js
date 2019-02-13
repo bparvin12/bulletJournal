@@ -1,63 +1,97 @@
-import React from "react";
-import PropTypes from 'prop-types';
+import React, { Component } from "react";
 import { withStyles } from '@material-ui/core/styles';
-// import API from "../utils/API";
+import API from "../../utils/API";
 import styles from './Health.styles';
-import Button from '@material-ui/core/Button';
 import TextFieldButton from '../../components/TextFieldButton';
-import Grid from '@material-ui/core/Grid';
+import moment from "moment";
+import ListItem from '@material-ui/core/ListItem';
+import ListItemIcon from '@material-ui/core/ListItemIcon';
+import ListItemText from '@material-ui/core/ListItemText';
+import List from '@material-ui/core/List';
 
+class CalorieTracker extends Component {
+    // Initialize this.state.Health as an empty array
+    state = {
+        dailyCalorieCount: [],
+        positiveCalories: "",
+        negativeCalories: ""
+    };
 
+    componentDidMount() {
+        const arr = []
+        for (var i = 0; i < 7; i++) {
+            arr.push({
+                date: moment().subtract('days', i)
+            });
+        }
+        // console.log(arr) ***replacing console log with setState
+        this.setState({
+            dailyCalorieCount:arr 
+            // ***setting the variable "dailyCalorieCount" to the array
+          });
+    }
 
-const Health = (props) => {
-    const { classes } = props;
-    return (
-        <div>
-            <h3 className={classes.input}>THIS IS 7 DAYS OF HEALTH!!</h3>
-            <h4 className={classes.subinput}>Day 1</h4>
-            <Grid container="fluid" item xs={6}>
-                <TextFieldButton />
-                <Button variant="contained" className={classes.button}>"Click to Save"</Button>
-            </Grid>
-            <h4 className={classes.subinput}>Day 2</h4>
-            <Grid container="fluid" item xs={6}>
-                <TextFieldButton />
-                <Button variant="contained" className={classes.button}>"Click to Save"</Button>
-            </Grid>
-            <h4 className={classes.subinput}>Day 3</h4>
-            <Grid container="fluid" item xs={6}>
-                <TextFieldButton />
-                <Button variant="contained" className={classes.button}>"Click to Save"</Button>
-            </Grid>
-            <h4 className={classes.subinput}>Day 4</h4>
-            <Grid container="fluid" item xs={6}>
-                <TextFieldButton />
-                <Button variant="contained" className={classes.button}>"Click to Save"</Button>
-            </Grid>
-            <h4 className={classes.subinput}>Day 5</h4>
-            <Grid container="fluid" item xs={6}>
-                <TextFieldButton />
-                <Button variant="contained" className={classes.button}>"Click to Save"</Button>
-            </Grid>
-            <h4 className={classes.subinput}>Day 6</h4>
-            <Grid container="fluid" item xs={6}>
-                <TextFieldButton />
-                <Button variant="contained" className={classes.button}>"Click to Save"</Button>
-            </Grid>
-            <h4 className={classes.subinput}>Day 7</h4>
-            <Grid container="fluid" item xs={6}>
-                <TextFieldButton />
-                <Button variant="contained" className={classes.button}>"Click to Save"</Button>
-            </Grid>
-        </div>
+    // handle any changes to the input fields
+    handleInputChange = event => {
+        // Pull the name and value properties off of the event.target (the element which triggered the event)
+        const { name, value } = event.target;
 
-    )
+        // Set the state for the appropriate input field
+        this.setState({
+            [name]: value
+        });
+    };
+
+    // When the form is submitted, prevent the default event and alert the username and password
+    handleFormSubmit = event => {
+        event.preventDefault();
+        API.saveCalorieTracker({
+            positiveCalories: this.state.positiveCalories,
+            negativeCalories: this.state.negativeCalories
+        }).then(results => {
+            this.setState({
+                dailyCalorieCount: [results.data, ...this.state.dailyCalorieCount],
+                positiveCalories: "",
+                negativeCalories: ""
+            });
+            console.log(results);
+        })
+    };
+
+    loadCalorieTrackerCounts = () => {
+        API.getCalorieTrackers()
+            .then(res =>
+                this.setState({ dailyCalorieCount: res.data, positiveCalories: "", negativeCalories: "" })
+            )
+            .catch(err => console.log(err));
+    };
+
+    deleteCalorieTracker = id => {
+        API.deleteCalorieTracker(id).then(() => {
+            this.setState({
+                calorieTrackers: this.state.calorieTrackers.filter(calorieTracker => calorieTracker._id !== id),
+            });
+        });
+    }
+
+    // taking "this.props" and puts it in a variable called "classes"
+    render() {
+        const { classes } = this.props;
+        return (
+            <div>
+                <h3 className={classes.input}>THIS IS 7 DAYS OF HEALTH!!</h3>
+                <List>
+                    {['Day 1', 'Day 2', 'Day 3', 'Day4', 'Day 5', 'Day 6', 'Day'].map((text, index) => (
+                        <ListItem button key={text}>
+                            <ListItemIcon>{index % 7 === 0 ? <TextFieldButton /> : <TextFieldButton />}</ListItemIcon>
+                            <ListItemText primary={text} />
+                        </ListItem>
+                    ))}
+                </List>
+            </div>
+        );
+    }
 }
 
 
-Health.propTypes = {
-    classes: PropTypes.object.isRequired,
-};
-
-
-export default withStyles(styles)(Health);
+export default withStyles(styles)(CalorieTracker);

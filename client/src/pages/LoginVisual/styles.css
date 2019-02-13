@@ -25,7 +25,7 @@ h1{
     font-size: 90px;
     text-align: center;
     padding: 20px;
-    background-color: aqua;
+    background-color:  rgb(51, 204, 204);
     border-radius: 20px;
     margin: auto;
     margin-top: 30px;
@@ -45,7 +45,7 @@ h2{
 
 }
 .style-button{
-    background-color: aqua !important;
+    background-color:rgb(51, 204, 204) !important;
     color: white !important;
     font-size: 20px !important;
     padding: 13px !important;

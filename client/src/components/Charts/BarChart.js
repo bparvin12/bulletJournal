@@ -18,14 +18,15 @@ class BarChart extends Component {
                             17009,
                             15009,
                         ],
-                        backgroundColor:[
+                        borderColor:[
                             'rgba(0, 0, 255, 1)',
                             'rgba(0, 255, 255, 1)',
                             'rgba(128, 0, 128, 1)',
                             'rgba(0, 0, 255, 1)',
                             'rgba(0, 255, 255, 1)',
                             'rgba(128, 0, 128, 1)',
-                        ]
+                        ],
+                        borderWidth: 2,
                     }
                 ] 
             }
