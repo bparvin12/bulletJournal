@@ -9,4 +9,5 @@ export default theme => ({
         // is hidden
         backgroundColor: 'blue',
     },
+
 });

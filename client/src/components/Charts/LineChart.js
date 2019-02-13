@@ -6,10 +6,11 @@ class LineChart extends Component {
         super(props);
         this.state = {
             chartData:{
-                labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'],
+                labels: ['JAN', 'FEB', 'MAR', 'APR', 'MAY', 'JUN', 'JUL', 'AUG', 'SEP', 'OCT', 'NOV', 'DEC'],
                 datasets: [
                     {
                         label: 'Task Completion',
+                        color: 'white',
                         data: [
                             17508009,
                             12133009,
@@ -37,12 +38,19 @@ class LineChart extends Component {
                             'rgba(128, 0, 128, 1)',
                             'rgba(128, 128, 128, 1)',
                             'rgba(255, 0, 0, 1)',
-                        ]
+                        ],
+                        fillColor: 'linear-gradient(90deg, #blue 100%, white 40%)',
+                        pointBackgroundColor: 'rgba(0, 0, 255, 1)',
+                        borderWidth: 4,
+                        pointBorderWidth: 5,
+                        lineTension: .5,
+                        textColor: 'white',
                     }
                 ] 
             }
         }
     }
+
     render() {
         return (
             <div className="chart">
@@ -52,6 +60,20 @@ class LineChart extends Component {
                 height={200}
                 options={{
                     maintainAspectRatio: false,
+                    showLines: true,
+                    scales: {
+                        xAxes: [{
+                            gridLines: {
+                                color: "rgba(0, 0, 255, 0.2)",
+                            }
+                        }],
+                        yAxes: [{
+                            gridLines: {
+                                color: "rgba(0, 0, 0, 0)",
+                            }   
+                        }]
+                    }
+
                     }}
                 />
             </div>

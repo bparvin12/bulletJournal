@@ -16,7 +16,14 @@ import InboxIcon from '@material-ui/icons/MoveToInbox';
 import MailIcon from '@material-ui/icons/Mail';
 import Navbar from "../Navbar";
 import styles from "./Menu.styles";
-
+import AccountBalanceIcon from '@material-ui/icons/AccountBalance';
+import FitnessCenterIcon from '@material-ui/icons/FitnessCenter';
+import AttachMoneyIcon from '@material-ui/icons/AttachMoney';
+import ListIcon from '@material-ui/icons/List';
+import NotificationsIcon from '@material-ui/icons/Notifications';
+import AccountCircle from '@material-ui/icons/AccountCircle';
+import SchoolIcon from '@material-ui/icons/School';
+import HomeIcon from '@material-ui/icons/Home';
 
 class Menu extends React.Component {
   state = {
@@ -54,15 +61,15 @@ class Menu extends React.Component {
         >
           <div className={classes.toolbar}>
             <IconButton onClick={this.handleDrawerClose}>
-              {theme.direction === 'rtl' ? <ChevronRightIcon /> : <ChevronLeftIcon />}
+              {theme.direction === 'rtl' ? <NotificationsIcon /> : <ChevronLeftIcon />}
             </IconButton>
      
           </div>
           <Divider />
           <List>
-            {['Inbox', 'Starred', 'Send email', 'Drafts'].map((text, index) => (
+            {['Dashboard', 'Notifications', 'Task List', 'Drafts'].map((text, index) => (
               <ListItem button key={text}>
-                <ListItemIcon>{index % 2 === 0 ? <InboxIcon /> : <MailIcon />}</ListItemIcon>
+                <ListItemIcon>{index % 2 === 0 ? <HomeIcon /> : <NotificationsIcon />}</ListItemIcon>
                 <ListItemText primary={text} />
               </ListItem>
             ))}
@@ -71,7 +78,7 @@ class Menu extends React.Component {
           <List>
             {['All mail', 'Trash', 'Spam'].map((text, index) => (
               <ListItem button key={text}>
-                <ListItemIcon>{index % 2 === 0 ? <InboxIcon /> : <MailIcon />}</ListItemIcon>
+                <ListItemIcon>{index % 2 === 0 ? <SchoolIcon /> : <MailIcon />}</ListItemIcon>
                 <ListItemText primary={text} />
               </ListItem>
             ))}
