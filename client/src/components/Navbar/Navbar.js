@@ -63,7 +63,7 @@ class Navbar extends React.Component {
   };
 
   goHome() {
-    window.location.href = "/"
+    window.location.href = "/home"
   }
 
   goToSignIn() {
