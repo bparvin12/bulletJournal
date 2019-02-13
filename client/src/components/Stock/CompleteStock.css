@@ -1,0 +1,14 @@
+.header {
+    font-size: 15px;
+}
+
+.symbol {
+    font-size: 25px;
+ 
+}
+
+.table-container {
+    overflow-y: scroll;
+    height: 325px;
+}
+

@@ -6,19 +6,19 @@ import Grid from '@material-ui/core/Grid';
 import FinanceWidget from '../../widgets/Finance';
 // import GoalsWidget from '../../widgets/Goals';
 import TodosWidget from '../../widgets/Todos';
-import Weather from "../../widgets/Weather";
+// import Weather from "../../widgets/Weather";
 import BarChart from "../../components/Charts/BarChart";
 import LineChart from "../../components/Charts/LineChart";
 // import PieChart from "../../components/Charts/PieChart";
 import PerformanceChart from "../../components/Charts/PerformanceChart";
-import { Card, BottomNavigation } from '@material-ui/core';
-import Chat from "../../widgets/Chat";
+// import { Card, BottomNavigation } from '@material-ui/core';
+// import Chat from "../../widgets/Chat";
 import { Link } from 'react-router-dom';
 import Typography from '@material-ui/core/Typography';
-import Stock from "../../widgets/Stock";
 import CompleteCalc from "../../components/Calculator/CompleteCalc.jsx";
-import WeatherWidget from "../../components/WeatherWidget/WeatherCard"
+// import WeatherWidget from "../../components/WeatherWidget/WeatherCard"
 import WeatherCard from '../../components/WeatherWidget/WeatherCard';
+import Stock from "../../components/Stock/CompleteStock";
 
 
 const styles = theme => ({
@@ -95,10 +95,10 @@ function CenteredGrid(props) {
         </Grid>
         <Grid item xs={4}>
           <Paper className={classes.paper}>
-          <Typography className={classes.title} variant="h4" align="left" color='primary' noWrap>
+            <Typography className={classes.title} variant="h4" align="left" color='primary' noWrap>
               <Link className='health-link' to='../Health/Health.js'>Health Stats:</Link>
-          </Typography>
-          <BarChart height="340"/>
+            </Typography>
+            <BarChart height="340" />
           </Paper>
         </Grid>
         <Grid item xs={4}>
@@ -115,7 +115,9 @@ function CenteredGrid(props) {
           <Paper className={classes.paper}><TodosWidget /></Paper>
         </Grid>
         <Grid item xs={6}>
-          <Paper className={classes.paper}>Data Table (Goal Status/Checkpoints/Motivation) Placeholder</Paper>
+          <Paper className={classes.paper}>
+            <Stock />
+          </Paper>
         </Grid>
 
         {/* Fifth Row */}
@@ -129,11 +131,10 @@ function CenteredGrid(props) {
             <WeatherCard />
           </Paper>
         </Grid>
-        <Grid item xs={2}>
+        <Grid item xs={4}>
+          <Paper className={classes.paper}>
 
-        </Grid>
-        <Grid item xs={2}>
-
+          </Paper>
         </Grid>
       </Grid>
     </div>
