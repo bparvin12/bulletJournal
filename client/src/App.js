@@ -19,7 +19,7 @@ import reducers from './reducers';
 
 import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles';
 import "./App.css";
-import Error from "./components/Error"
+import Error from "./components/Error";
 
 const theme = createMuiTheme({
   palette: {
@@ -51,7 +51,7 @@ const App = () => (
         <Route exact path="/chat" component={CompleteChat} />
         <Route exact path="/login" component={Login} />
         <Route exact path="/signin" component={SignIn} />
-        <Route exact path="/signup" component={SignUp} />
+        <Route exact path="" component={SignUp} />
         <Route exact path="/member" component={Member} />
         <Route component={Error} />
         </Switch>
