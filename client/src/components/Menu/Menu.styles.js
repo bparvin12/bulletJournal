@@ -39,5 +39,14 @@ export default theme => ({
       flexGrow: 1,
       padding: theme.spacing.unit * 3,
     },
+    paper: {
+      height: 360,
+      background: 'linear-gradient(45deg, #262b40 30%, #171a26 90%)',
+      padding: theme.spacing.unit * 2,
+      textAlign: 'center',
+      justify: 'bottom',
+      text: 'white',
+      color: '#9e9e9e',
+    },
   });
   

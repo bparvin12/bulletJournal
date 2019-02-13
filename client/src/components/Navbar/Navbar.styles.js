@@ -3,7 +3,7 @@ const drawerWidth = 240;
 
 export default theme => ({
     appBar: {
-      backgroundColor: "",
+      backgroundColor: 'rgb(51, 102, 255)',
       zIndex: theme.zIndex.drawer + 1,
       transition: theme.transitions.create(['width', 'margin'], {
         easing: theme.transitions.easing.sharp,
@@ -34,6 +34,7 @@ export default theme => ({
     title: {
       display: 'none',
       color: 'white',
+      fontStyle: 'strong',
       [theme.breakpoints.up('sm')]: {
         display: 'block',
       },

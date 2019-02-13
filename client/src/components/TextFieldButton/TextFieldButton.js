@@ -3,6 +3,9 @@ import styles from "./TextFieldButton.styles";
 import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
 import TextField from '@material-ui/core/TextField';
+import classNames from 'classnames';
+import Button from '@material-ui/core/Button';
+import SaveIcon from '@material-ui/icons/Save';
 
 class TextFieldButton extends React.Component {
   state = {
@@ -23,6 +26,7 @@ class TextFieldButton extends React.Component {
 
     return (
       <form className={classes.container} noValidate autoComplete="off">
+      <h4 className={classes.subinput}>Day ()</h4>
         <TextField
           id="outlined-name"
           label="(Positive-Intake)" 
@@ -41,7 +45,15 @@ class TextFieldButton extends React.Component {
           margin="normal"
           variant="outlined"
         />
-
+        <Button 
+        variant="contained" 
+        size="small" color="secondary" 
+        className={classes.button}>
+        <SaveIcon 
+        className={classNames(classes.leftIcon, 
+        classes.iconSmall)} />
+        Save
+      </Button>
       </form>
     );
   }
