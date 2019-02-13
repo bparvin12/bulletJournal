@@ -156,7 +156,7 @@ class Navbar extends React.Component {
           </IconButton>
           <Typography className={classes.title} variant="h2" color="inherit" noWrap onClick={this.goHome}>
             {/* <Link className='nav-link' to='/'>"Q" the Butler</Link> */}
-            "Q" the Butler
+            Q the Butler
           </Typography>
           <div className={classes.grow} />
           <div className={classes.weatherWidget}>
