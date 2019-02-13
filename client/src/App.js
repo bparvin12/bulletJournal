@@ -51,7 +51,7 @@ const App = () => (
         <Route exact path="/chat" component={CompleteChat} />
         <Route exact path="/login" component={Login} />
         <Route exact path="/signin" component={SignIn} />
-        <Route exact path="" component={SignUp} />
+        <Route exact path="/signup" component={SignUp} />
         <Route exact path="/member" component={Member} />
         <Route component={Error} />
         </Switch>
