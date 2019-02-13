@@ -4,11 +4,24 @@ import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
 import styles from './LoginVisual.styles';
 import Button from '@material-ui/core/Button';
-import "./styles.css"
-import dog from "./Images/BG1.jpg"
+import "./styles.css";
+import dog from "./Images/BG1.jpg";
+import { signUp } from '../../actions';
+
 
 const LoginVisual = (props) => {
+
     const { classes } = props;
+
+    const goToSignIn = () => {
+      window.location.href = "/signin"
+      
+    };
+    
+    const goToSignUp = () => {
+      window.location.href = "/signup" 
+    };
+
     return (
         // <div className="container">
         <div className="container">
@@ -21,20 +34,20 @@ const LoginVisual = (props) => {
             {/* <input placeholder="e-mail" className="style-input"></input>
             <input placeholder="Password" className="style-input"></input> */}
             <p>
-            <button className="style-button">
-            <Link className='nav-link' to='/signIn'>Sign In</Link>
+            <button className="style-button" onClick={goToSignIn}>Sign In
+            {/* <Link className='nav-link' to='/signIn'>Sign In</Link> */}
            </button>
            </p>
 
            <p>
-            <button className="style-button">
-            <Link className='nav-link' to='/signUp'>Register</Link>
+            <button className="style-button" onClick={goToSignUp}> Register
+            {/* <Link className='nav-link' to='/signUp'>Register</Link> */}
            </button>
            </p>
 
         </div>
     )
-}
+};
 
 LoginVisual.propTypes = {
   classes: PropTypes.object.isRequired,

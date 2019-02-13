@@ -70,8 +70,8 @@ class Navbar extends React.Component {
     window.location.href = "/signin"
   }
 
-  goToSignOut() {
-    window.location.href = "/signout"
+  goToSignUp() {
+    window.location.href = "/signup"
   }
 
   render() {
@@ -90,13 +90,8 @@ class Navbar extends React.Component {
       >
         <MenuItem onClick={this.handleMenuClose} onClick={this.goHome}>Home</MenuItem>
         { !this.props.isAuth ?
-<<<<<<< HEAD
-          [<MenuItem><Link className='nav-link' to='/'>Sign In</Link></MenuItem>,
-          <MenuItem><Link className='nav-link' to='/'>Sign Up</Link></MenuItem>]
-=======
           [<MenuItem onClick={this.goToSignIn}>Sign In</MenuItem>,
-          <MenuItem onClick={this.goToSignOut}>Sign Up</MenuItem>]
->>>>>>> 9c1d3c999ceac55742a8db092d081540dc76dee1
+          <MenuItem onClick={this.goToSignOut}>Register</MenuItem>]
         : null
         }
 
