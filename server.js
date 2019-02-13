@@ -41,11 +41,6 @@ db.once('open', function() {
 
 // Define API routes here
 
-// Send every other request to the React app
-// Define any API routes before this runs
-app.get("/", (req, res) => {
-  res.sendFile(path.join(__dirname, "./client/build/index.html"));
-});
 
 app.get("/login", (req, res) => {
   res.sendFile(path.join(__dirname, "./client/src/pages/Login/Login"));
@@ -53,8 +48,15 @@ app.get("/login", (req, res) => {
 
 //Auth
 app.use('/users', require("./routes/users"));
+app.use('/calorietrackers', require("./routes/calorietrackers"));
 app.use('/tasks', require("./routes/tasks"));
 
+// Send every other request to the React app
+// Define any API routes before this runs. "*" Opens up every other route besides all the routes that have been defined. 
+// THIS ROUTE NEEDS TO BE LAST
+app.get("*", (req, res) => {
+  res.sendFile(path.join(__dirname, "./client/build/index.html"));
+});
 
 app.listen(PORT, () => {
   console.log(`🌎 ==> Server now on port https://localhost:${PORT}!`);
