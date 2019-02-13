@@ -6,17 +6,17 @@ import Grid from '@material-ui/core/Grid';
 import FinanceWidget from '../../widgets/Finance';
 // import GoalsWidget from '../../widgets/Goals';
 import TodosWidget from '../../widgets/Todos';
-import Weather from "../../widgets/Weather";
+// import Weather from "../../widgets/Weather";
 import BarChart from "../../components/Charts/BarChart";
 import LineChart from "../../components/Charts/LineChart";
 // import PieChart from "../../components/Charts/PieChart";
 import PerformanceChart from "../../components/Charts/PerformanceChart";
-import { Card, BottomNavigation } from '@material-ui/core';
-import Chat from "../../widgets/Chat";
+// import { Card, BottomNavigation } from '@material-ui/core';
+// import Chat from "../../widgets/Chat";
 import { Link } from 'react-router-dom';
 import Typography from '@material-ui/core/Typography';
 import CompleteCalc from "../../components/Calculator/CompleteCalc.jsx";
-import WeatherWidget from "../../components/WeatherWidget/WeatherCard"
+// import WeatherWidget from "../../components/WeatherWidget/WeatherCard"
 import WeatherCard from '../../components/WeatherWidget/WeatherCard';
 import Stock from "../../components/Stock/CompleteStock";
 

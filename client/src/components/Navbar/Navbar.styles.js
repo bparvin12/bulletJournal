@@ -1,5 +1,4 @@
 import { fade } from '@material-ui/core/styles/colorManipulator';
-import { Link } from '@material-ui/core';
 const drawerWidth = 240;
 
 export default theme => ({

@@ -1,9 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
-import Typography from '@material-ui/core/Typography';
+// import Typography from '@material-ui/core/Typography';
 import Modal from '@material-ui/core/Modal';
-import Button from '@material-ui/core/Button';
+// import Button from '@material-ui/core/Button';
 import CompleteChat from '../pages/Chat';
 import IconButton from '@material-ui/core/IconButton';
 import Badge from '@material-ui/core/Badge';
