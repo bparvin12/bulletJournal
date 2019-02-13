@@ -1,8 +1,8 @@
 
 import 'date-fns';
 import React from 'react';
-import InputTextBox from "../../components/Inputs/InputTextBox.jsx";
-import InputCalendarDate from '../../components/Inputs/InputCalendarDate.jsx';
+import InputTextBox from "../../components/Inputs/InputTextBox";
+import InputCalendarDate from '../../components/Inputs/InputCalendarDate.js';
 import InputTime from "../../components/Inputs/InputTime.jsx";
 import InputSwitch from "../../components/Inputs/InputSwitch.jsx";
 
