@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
 import styles from './LoginVisual.styles';
@@ -17,12 +18,20 @@ const LoginVisual = (props) => {
             {/* <img src={dog}className="logo flip-horizontal-fwd"></img> */}
             {/* <h2>the Butler</h2> */}
             <h2 className="tracking-in-expand">the Butler</h2>
-            <input placeholder="e-mail" className="style-input"></input>
-            <input placeholder="Password" className="style-input"></input>
-            <p><button className="style-button">
-                Ready to be served!
+            {/* <input placeholder="e-mail" className="style-input"></input>
+            <input placeholder="Password" className="style-input"></input> */}
+            <p>
+            <button className="style-button">
+            <Link className='nav-link' to='/signIn'>Sign In</Link>
            </button>
            </p>
+
+           <p>
+            <button className="style-button">
+            <Link className='nav-link' to='/signUp'>Register</Link>
+           </button>
+           </p>
+
         </div>
     )
 }
