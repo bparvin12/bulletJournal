@@ -2,6 +2,7 @@ import React from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Home from "./pages/Home";
 import Finance from "./pages/Finance";
+import LoginVisual from "./pages/LoginVisual";
 import Goals from "./pages/Goals";
 import Health from "./pages/Health";
 import Weather from "./pages/Weather";
@@ -18,7 +19,7 @@ import reducers from './reducers';
 
 import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles';
 import "./App.css";
-import Error from "./components/Error"
+import Error from "./components/Error";
 
 const theme = createMuiTheme({
   palette: {
@@ -36,11 +37,13 @@ const App = () => (
       isAuthenticated: jwtToken ? true : false
     }
   }, applyMiddleware(reduxThunk))}>
-  <MuiThemeProvider theme={theme}>
+
+      <MuiThemeProvider theme={theme}>
       <Router>
       <Menu>
         <Switch>
-        <Route exact path="/" component={Home} />
+        <Route exact path="/" component={LoginVisual} />
+        <Route exact path="/home" component={Home} />
         <Route exact path="/finance" component={Finance} />
         <Route exact path="/goals" component={Goals} />
         <Route exact path="/health" component={Health} />
@@ -48,7 +51,7 @@ const App = () => (
         <Route exact path="/chat" component={CompleteChat} />
         <Route exact path="/login" component={Login} />
         <Route exact path="/signin" component={SignIn} />
-        <Route exact path="/signup" component={SignUp} />
+        <Route exact path="" component={SignUp} />
         <Route exact path="/member" component={Member} />
         <Route component={Error} />
         </Switch>
@@ -56,7 +59,7 @@ const App = () => (
     </Router>
     </MuiThemeProvider>
 </Provider>
-)
+);
 
 
 

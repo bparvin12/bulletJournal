@@ -15,10 +15,11 @@ class SignIn extends Component {
         this.onSubmit = this.onSubmit.bind(this);   
     }
     async onSubmit(formData) {
+        console.log(this.props);
         console.log('submit action successful')
         console.log('formData: ', formData)
         // call action to backend here?
-        await this.props.SignIn(formData)
+        await this.props.signIn(formData)
         // get to Member page
         if(!this.props.errorMessage){
             this.props.history.push('/member')
@@ -76,4 +77,4 @@ function mapStateToProps(state) {
 export default compose(
     connect(mapStateToProps, actions),
     reduxForm({ form: 'signin' })
-    )(SignIn) ;
+    )(SignIn)

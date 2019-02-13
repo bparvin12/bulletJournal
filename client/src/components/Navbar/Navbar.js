@@ -14,6 +14,7 @@ import MenuIcon from '@material-ui/icons/Menu';
 import SearchIcon from '@material-ui/icons/Search';
 import AccountCircle from '@material-ui/icons/AccountCircle';
 import MailIcon from '@material-ui/icons/Mail';
+import HomeIcon from '@material-ui/icons/Home';
 import NotificationsIcon from '@material-ui/icons/Notifications';
 import MoreIcon from '@material-ui/icons/MoreVert';
 import classNames from 'classnames';
@@ -61,6 +62,18 @@ class Navbar extends React.Component {
     this.props.signOut()
   };
 
+  goHome() {
+    window.location.href = "/home"
+  }
+
+  goToSignIn() {
+    window.location.href = "/signin"
+  }
+
+  goToSignUp() {
+    window.location.href = "/signup"
+  }
+
   render() {
     const { anchorEl, mobileMoreAnchorEl } = this.state;
     const { classes } = this.props;
@@ -75,11 +88,10 @@ class Navbar extends React.Component {
         open={isMenuOpen}
         onClose={this.handleMenuClose}
       >
-        <MenuItem onClick={this.handleMenuClose}>Profile</MenuItem>
-        <MenuItem onClick={this.handleMenuClose}>My account</MenuItem>
+        <MenuItem onClick={this.handleMenuClose} onClick={this.goHome}>Home</MenuItem>
         { !this.props.isAuth ?
-          [<MenuItem><Link className='nav-link' to='/signin'>Sign In</Link></MenuItem>,
-          <MenuItem><Link className='nav-link' to='/signup'>Sign Up</Link></MenuItem>]
+          [<MenuItem onClick={this.goToSignIn}>Sign In</MenuItem>,
+          <MenuItem onClick={this.goToSignOut}>Register</MenuItem>]
         : null
         }
 
@@ -142,8 +154,9 @@ class Navbar extends React.Component {
           >
             <MenuIcon />
           </IconButton>
-          <Typography className={classes.title} variant="h4" noWrap>
-            <Link className='nav-link' to='/'>Queue the Butler</Link>
+          <Typography className={classes.title} variant="h2" color="inherit" noWrap onClick={this.goHome}>
+            {/* <Link className='nav-link' to='/'>"Q" the Butler</Link> */}
+            Q the Butler
           </Typography>
           <div className={classes.grow} />
           <div className={classes.weatherWidget}>
@@ -165,10 +178,8 @@ class Navbar extends React.Component {
           </div>
           <div className={classes.grow} />
           <div className={classes.sectionDesktop}>
-            <IconButton color="inherit">
-              <Badge badgeContent={4} color="secondary">
-                <MailIcon />
-              </Badge>
+            <IconButton color="inherit">  
+              <HomeIcon className={classes.iconHover} color="inherit" onClick={this.goHome} />
             </IconButton>
             <SimpleModalWrapped />
             <IconButton
@@ -211,3 +222,8 @@ export class Auth extends React.Component {
 };
 
 export default withStyles(styles)(Navbar);
+
+// export default compose(
+//   connect(mapStateToProps, actions),
+//   reduxForm({ form: 'signin' })
+//   )(SignIn)

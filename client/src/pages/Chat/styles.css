@@ -9,3 +9,12 @@
 .join-a-room {
     margin-top: 25%
 }
+
+.communities {
+    color: black;
+}
+
+.room {
+    text-align: left;
+    padding-left: 10px;
+}
