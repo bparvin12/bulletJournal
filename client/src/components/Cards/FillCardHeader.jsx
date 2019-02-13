@@ -1,7 +1,6 @@
 import React from "react";
-import { Button, ToolTip, IconButton, ClickAwayListener, Card, CardHeader, CardContent, Toolbar, Typography } from "@material-ui/core";
-import PropTypes from 'prop-types';
-import InputDialogue from "../Inputs/InputDialogue";
+import { Toolbar, Typography } from "@material-ui/core";
+import TaskInputDialog from '../../widgets/Todos/TaskInputDialog';
 
 
 const FillCardHeader = props => {
@@ -15,7 +14,7 @@ const FillCardHeader = props => {
                     {props.title}
                 </Typography>
                 <div>
-                    <InputDialogue icon={props.icon} dbCollection="" title = {props.title}>{props.children}</InputDialogue>
+                    <TaskInputDialog icon={props.icon} dbCollection="" title = {props.title}>{props.children}</TaskInputDialog>
                 </div>
             </Toolbar>
         </div>

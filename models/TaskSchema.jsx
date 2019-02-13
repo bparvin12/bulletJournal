@@ -6,14 +6,14 @@ const moment = require('moment');
 const Schema = mongoose.Schema;
 
 // Using the Schema constructor, create a new TaskSchema object
-const TaskSchema = new Schema ({
+const TaskSchema = new Schema({
     task: {
         type: String,
         trim: true,
         required: "Please label your task."
     },
     date: {
-        type: Moment,
+        type: String,
         match: [/([12]\d{3}-(0[1-9]|1[0-2])-(0[1-9]|[12]\d|3[01]))/, "YYYY-MM-DD"],
         default: moment().format('YYYY-MM-DD')
     },
@@ -29,24 +29,30 @@ const TaskSchema = new Schema ({
     },
     priority: {
         type: Number,
-        enum: [ 1 , 2 , 3]
+        enum: [1, 2, 3],
+        default: 1
     },
     status: {
         type: String,
         enum: [
-            "pending","started", "postponed", "completed", "canceled"
-        ]
+            "pending", "started", "postponed", "completed", "canceled"
+        ],
+        default: "pending"
     },
     user: {
         type: String,
         trim: true,
         required: "ERROR logging user"
-    }
+    },
 });
 
+// Custom method `coolifier`
+TaskSchema.methods.setter = function () {
+    
+};
 
 // This creates our model from the above schema, using mongoose's model method
-var Task = mongoose.model("Example", TaskSchema);
+var Task = mongoose.model("Task", TaskSchema);
 
 // Export the Example model
 module.exports = Task;

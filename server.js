@@ -53,6 +53,7 @@ app.get("/login", (req, res) => {
 
 //Auth
 app.use('/users', require("./routes/users"));
+app.use('/tasks', require("./routes/tasks"));
 
 
 app.listen(PORT, () => {

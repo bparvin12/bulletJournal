@@ -1,11 +1,15 @@
 import React from 'react';
+import InputTextBox from '../../components/Inputs/InputTextBox';
+import InputCalendarDate from '../../components/Inputs/InputCalendarDate';
+import InputSwitch from '../../components/Inputs/InputSwitch';
+import InputTime from '../../components/Inputs/InputTime';
 
 import {
-  Button, Dialog, DialogActions, DialogContent, DialogContentText,
-  DialogTitle, IconButton, TextField, Typography
+  Button, Dialog, DialogContent, 
+  DialogTitle, IconButton, Typography
 } from '@material-ui/core';
 
-class InputDialogue extends React.Component {
+class InputDialog extends React.Component {
   state = {
     open: false,
   };
@@ -15,6 +19,11 @@ class InputDialogue extends React.Component {
   };
 
   handleClose = () => {
+    this.setState({ open: false });
+  };
+
+  handleAddClose = () => {
+
     this.setState({ open: false });
   };
 
@@ -36,14 +45,25 @@ class InputDialogue extends React.Component {
           <DialogTitle id="form-dialog-title">
             <Typography>
               Add to {this.props.title}
-            
-              <IconButton onClick={this.handleClose}  color="primary">
+              <IconButton onClick={this.handleClose} color="primary">
                 <i className="material-icons">close</i>
               </IconButton>
             </Typography>
           </DialogTitle>
-          <DialogContent onClick={this.handleClose}>
-            {this.props.children}
+          <DialogContent>
+            <form action="/task/submit" method="post" noValidate>
+              <InputTextBox name="task" label="Task" inputClass="taskToAdd" />
+              <InputCalendarDate name="date" />
+              <br></br>
+              <InputSwitch activate={this.moreInfo} color="default" />
+              {/* want to be able to toggle away following inputs */}
+              <InputTime name="time" label="Deadline" />
+              <br></br>
+              <InputTextBox name="description" label="Task Description" />
+              <Button onClick={this.handleAddClose} variant="outlined" >
+                ADD
+              </Button>
+            </form>
           </DialogContent>
           {/* <DialogActions>
             <Button onClick={this.handleAddClose} color="primary">
@@ -57,4 +77,4 @@ class InputDialogue extends React.Component {
 }
 
 
-export default InputDialogue;
+export default InputDialog;
