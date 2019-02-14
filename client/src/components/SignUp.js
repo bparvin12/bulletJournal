@@ -6,9 +6,6 @@ import { compose } from 'redux';
 import * as actions from '../actions';
 
 
-import LoginInput from './Inputs/LoginInput';
-import { isThursdayWithOptions } from 'date-fns/esm/fp';
-
 class SignUp extends Component {
     constructor(props){
         super(props);
