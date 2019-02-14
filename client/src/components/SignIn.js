@@ -8,9 +8,9 @@ import * as actions from '../actions';
 
 
 class SignIn extends Component {
-    constructor(props){
+    constructor(props) {
         super(props);
-        this.onSubmit = this.onSubmit.bind(this);   
+        this.onSubmit = this.onSubmit.bind(this);
     }
     async onSubmit(formData) {
         console.log(this.props);
@@ -19,47 +19,53 @@ class SignIn extends Component {
         // call action to backend here?
         await this.props.signIn(formData)
         // get to Member page
-        if(!this.props.errorMessage){
+        if (!this.props.errorMessage) {
             this.props.history.push('/member')
         }
     }
 
-render() {
-    const { handleSubmit } = this.props;
-    return (
-        <div>
-            <form onSubmit={handleSubmit(this.onSubmit)}>
+    render() {
+        const { handleSubmit } = this.props;
+        return (
+            <div className="container" align='center'>
+                <h1 >Q</h1>
+                <h2 >the Butler</h2>
+                <form onSubmit={handleSubmit(this.onSubmit)}>
 
-            <fieldset>
-                <Field
-                    name="email"
-                    type="text"
-                    id="email"
-                    component='input' />
-            </fieldset> 
+                    <fieldset>
+                        <Field
+                            className="style-button"
+                            placeholder="enter e-mail"
+                            name="email"
+                            type="text"
+                            id="email"
+                            component='input' />
+                    </fieldset>
 
-            <fieldset>
-                 <Field
-                    name="password"
-                    type="password"
-                    id="password"
-                    component='input' />   
-            </fieldset>
+                    <fieldset>
+                        <Field
+                            className="style-button"
+                            placeholder="enter password"
+                            name="password"
+                            type="password"
+                            id="password"
+                            component='input' />
+                    </fieldset>
 
-            { this.props.errorMessage ?
-                <div>
-                    { this.props.errorMessage }
-                </div>  : null }
+                    {this.props.errorMessage ?
+                        <div>
+                            {this.props.errorMessage}
+                        </div> : null}
 
-            <button type="submit">Sign In
+                    <button type="submit" className="style-button" >Sign In
                 {/* <span class="MuiButton-label-429">Sign In</span>
                 <span class="MuiTouchRipple-root-312"></span> */}
-                
-            </button>
 
-            </form>
+                    </button>
 
-        </div>
+                </form>
+
+            </div>
 
         );
     }
@@ -75,4 +81,7 @@ function mapStateToProps(state) {
 export default compose(
     connect(mapStateToProps, actions),
     reduxForm({ form: 'signin' })
-    )(SignIn)
+)(SignIn)
+
+
+
