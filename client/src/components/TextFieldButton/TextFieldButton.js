@@ -9,39 +9,56 @@ import SaveIcon from '@material-ui/icons/Save';
 
 class TextFieldButton extends React.Component {
   state = {
-    name: 'How many calories?',
-    age: '',
-    multiline: 'Controlled',
-    currency: 'EUR',
+    positiveCalorieIntake: 'How many calories?',
+    negativeCalorieIntake: '',
   };
 
-  handleChange = name => event => {
+  handleChange = positiveCalorieIntake => event => {
     this.setState({
-      [name]: event.target.value,
+      [positiveCalorieIntake]: event.target.value,
     });
   };
+
+  handleChange = negativeCalorieIntake => event => {
+    this.setState({
+      [negativeCalorieIntake]: event.target.value,
+    });
+  };
+
+
+  // handlePositiveIntakeChange = event => {
+  //   this.setState({
+  //     positiveIntake: event.target.value
+  //   })
+  // }
+
+  // handleNegativeIntakeChange = event => {
+  //   this.setState({
+  //     negativeIntake: event.target.value
+  //   })
+  // }
 
   render() {
     const { classes } = this.props;
 
     return (
       <form className={classes.container} noValidate autoComplete="off">
-      <h4 className={classes.subinput}>Day ()</h4>
+      <h4 className={classes.subinput}>{this.props.date}</h4>
         <TextField
           id="outlined-name"
           label="(Positive-Intake)" 
           className={classes.textField}
-          value={this.state.name}
-          onChange={this.handleChange('name')}
+          value={this.state.positiveCalorieIntake}
+          onChange={this.handleChange('positiveCalorieIntake')}
           margin="normal"
           variant="outlined"
         />
         <TextField
-          error
-          id="outlined-error"
-          label="(Negative-Burned)" 
-          defaultValue="How many calories?"
+          id="outlined-number"
+          label="(Negative-Burned)"
           className={classes.textField}
+          value={this.state.negativeCalorieIntake}
+          onChange={this.handleChange('negativeCalorieIntake')}
           margin="normal"
           variant="outlined"
         />

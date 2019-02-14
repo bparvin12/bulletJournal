@@ -16,7 +16,6 @@ import { createStore, applyMiddleware } from 'redux';
 import reduxThunk from 'redux-thunk'; 
 import { Provider } from 'react-redux';
 import reducers from './reducers';
-
 import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles';
 import "./App.css";
 import Error from "./components/Error";
