@@ -3,16 +3,15 @@ import { withStyles } from '@material-ui/core/styles';
 import styles from './Todos.styles';
 import Card from "@material-ui/core/Card";
 import CardContent from "@material-ui/core/CardContent";
-import FillCardHeader from "../../components/Cards/FillCardHeader";
-// import InputDialogue from "../../components/inputs/InputDialogue";
-import AddTaskItemForm from "./AddTaskItemForm";
 import List from "@material-ui/core/List"
 import ListItem from '@material-ui/core/ListItem'
-import ListItemPrimary from "./ListItemPrimary";
 import ListItemSecondaryAction from '@material-ui/core/ListItemSecondaryAction';
+// import InputDialogue from "../../components/inputs/InputDialogue";
+import FillCardHeader from "../../components/Cards/FillCardHeader";
+
+import AddTaskItemForm from "./AddTaskItemForm";
+import ListItemPrimary from "./ListItemPrimary";
 import MenuList from "./MenuList";
-import axios from "axios";
-import moment from "moment";
 
 
 class Todos extends React.Component {
@@ -77,24 +76,3 @@ class Todos extends React.Component {
 
 
 export default withStyles(styles)(Todos);
-
-        // import React from "react";
-// import {withStyles} from '@material-ui/core/styles';
-            // import styles from './Todos.styles';
-            // import Button from '@material-ui/core/Button';
-
-
-// const Todos = (props) => {
-//     const { classes } = props;
-//     return (
-//         <div>
-//             <h1 className={classes.input}>TO DO LIST!!</h1>
-//             <Button variant="contained" className={classes.button}>
-//                 TODOS
-//            </Button>
-//         </div>
-//     )
-// }
-
-
-// export default withStyles(styles)(Todos);
