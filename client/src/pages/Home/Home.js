@@ -31,7 +31,7 @@ const styles = theme => ({
     height: 'auto',
   },
   paper: {
-    height: 300,
+    height:370,
     background: 'linear-gradient(45deg, #262b40 30%, #171a26 90%)',
     padding: theme.spacing.unit * 2,
     textAlign: 'center',
