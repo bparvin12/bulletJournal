@@ -68,8 +68,8 @@ class CalorieTracker extends Component {
               <h1>What Books Should I Read?</h1>
             </Jumbotron>
             <form>
-              <Input value={this.state.positiveCalories} name="title" placeholder="Title (required)" onChange={this.handleInputChange} />
-              <Input value={this.state.negativeCalories} name="author" placeholder="Author (required)" onChange={this.handleInputChange} />
+              <Input value={this.state.positiveCalories} name="positiveCalories" placeholder="PositiveCalories (required)" onChange={this.handleInputChange} />
+              <Input value={this.state.negativeCalories} name="negativeCalories" placeholder="NegativeCalories (required)" onChange={this.handleInputChange} />
               <FormBtn onClick={this.handleFormSubmit}>Submit Daily Calorie Count</FormBtn>
             </form>
           </Col>

@@ -22,6 +22,14 @@ import IsoIcon from '@material-ui/icons/Iso'
 import WbSunnyIcon from '@material-ui/icons/WbSunny'
 import Navbar from "../Navbar";
 import styles from "./Menu.styles";
+import AccountBalanceIcon from '@material-ui/icons/AccountBalance';
+import FitnessCenterIcon from '@material-ui/icons/FitnessCenter';
+import AttachMoneyIcon from '@material-ui/icons/AttachMoney';
+import ListIcon from '@material-ui/icons/List';
+import NotificationsIcon from '@material-ui/icons/Notifications';
+import AccountCircle from '@material-ui/icons/AccountCircle';
+import SchoolIcon from '@material-ui/icons/School';
+import HomeIcon from '@material-ui/icons/Home';
 import Switch from '@material-ui/core/Switch';
 
 
@@ -72,7 +80,7 @@ class Menu extends React.Component {
         >
           <div className={classes.toolbar}>
             <IconButton onClick={this.handleDrawerClose}>
-              {theme.direction === 'rtl' ? <ChevronRightIcon /> : <ChevronLeftIcon />}
+              {theme.direction === 'rtl' ? <NotificationsIcon /> : <ChevronLeftIcon />}
             </IconButton>
 
           </div>
