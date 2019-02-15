@@ -55,3 +55,10 @@ LoginVisual.propTypes = {
 
  
 export default withStyles(styles)(LoginVisual);
+
+
+// This may work to include the "connect" and the "withStyles" as one default object (from signin and signup pages)
+//export default compose(
+//   connect(mapStateToProps, actions),
+//   reduxForm({ form: 'signup' })
+//   )(withStyles(styles)(LoginVisual)) ;
