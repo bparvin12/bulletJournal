@@ -42,8 +42,8 @@ class App extends Component {
 
   handleChange = name => event => {
     this.setState({ [name]: event.target.checked })
-    console.log(name);
-    console.log(event.target.checked)
+    // console.log(name);
+    // console.log(event.target.checked)
   };
 
   render() {
