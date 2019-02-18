@@ -561,7 +561,7 @@ This will allow you to do imports like
 @import 'nprogress/nprogress'; // importing a css file from the nprogress node module
 ```
 
-At this point you might want to remove all CSS files from the source control, and add `src/**/*.css` to your `.gitignore` file. It is generally a good practice to keep the build products outside of the source control.
+At this point you might want to remove all CSS files from the source control, and add `src/**/*.css` to your `.` file. It is generally a good practice to keep the build products outside of the source control.
 
 As a final step, you may find it convenient to run `watch-css` automatically with `npm start`, and run `build-css` as a part of `npm run build`. You can use the `&&` operator to execute two scripts sequentially. However, there is no cross-platform way to run two scripts in parallel, so we will install a package for this:
 
@@ -1973,7 +1973,7 @@ remote: npm ERR! Linux 3.13.0-105-generic
 remote: npm ERR! argv "/tmp/build_a2875fc163b209225122d68916f1d4df/.heroku/node/bin/node" "/tmp/build_a2875fc163b209225122d68916f1d4df/.heroku/node/bin/npm" "run" "build"
 ```
 
-In this case, ensure that the file is there with the proper lettercase and that’s not ignored on your local `.gitignore` or `~/.gitignore_global`.
+In this case, ensure that the file is there with the proper lettercase and that’s not ignored on your local `.` or `~/._global`.
 
 ### Modulus
 
