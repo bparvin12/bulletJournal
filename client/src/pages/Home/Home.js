@@ -79,7 +79,7 @@ class CenteredGrid extends React.Component {
         </Grid> */}
 
           {/* Second Row With the Performance Chart Grid Tile*/}
-          { this.props.checkedA &&
+          {this.props.checkedA &&
             <Grid item xs={12} >
               <Paper className={classes.paper}>
                 <Typography className={classes.title} variant="h4" align="left" color='textPrimary' noWrap>
@@ -91,7 +91,7 @@ class CenteredGrid extends React.Component {
           }
 
           {/* Third Row With the three Grid Tiles: Task Chart, Goals, Budget */}
-          { this.props.checkedB &&
+          {this.props.checkedB &&
             <Grid item xs={4}>
               <Paper className={classes.paper}>
                 <Typography className={classes.title} variant="h4" align="left" color='primary' noWrap>
@@ -101,63 +101,63 @@ class CenteredGrid extends React.Component {
               </Paper>
             </Grid>
           }
-          { this.props.checkedC &&
-          <Grid item xs={4}>
-            <Paper className={classes.paper}>
-              <Typography className={classes.title} variant="h4" align="left" color='primary' noWrap>
-                <Link className='health-link' to='../Health/Health.js'>Health Stats:</Link>
-              </Typography>
-              <BarChart height="340" />
-            </Paper>
-          </Grid>
+          {this.props.checkedC &&
+            <Grid item xs={4}>
+              <Paper className={classes.paper}>
+                <Typography className={classes.title} variant="h4" align="left" color='primary' noWrap>
+                  <Link className='health-link' to='../Health/Health.js'>Health Stats:</Link>
+                </Typography>
+                <BarChart height="340" />
+              </Paper>
+            </Grid>
           }
-          { this.props.checkedD &&
-          <Grid item xs={4}>
-            <Paper className={classes.paper}>
-              <Typography className={classes.title} variant="h4" align="left" color='primary' noWrap>
-                <Link className='finance-link' to='../Finance/Finance.js'>Budget:</Link>
-              </Typography>
-              <FinanceWidget />
-            </Paper>
-          </Grid>
+          {this.props.checkedD &&
+            <Grid item xs={4}>
+              <Paper className={classes.paper}>
+                <Typography className={classes.title} variant="h4" align="left" color='primary' noWrap>
+                  <Link className='finance-link' to='../Finance/Finance.js'>Budget:</Link>
+                </Typography>
+                <FinanceWidget />
+              </Paper>
+            </Grid>
           }
 
           {/* Fourth Row With the two Grid Tiles: To do list, MISC List */}
-          { this.props.checkedE &&
-          <Grid item xs={6}>
-            <Paper className={classes.paper}><TodosWidget /></Paper>
-          </Grid>
+          {this.props.checkedE &&
+            <Grid item xs={6}>
+              <Paper className={classes.paper}><TodosWidget /></Paper>
+            </Grid>
           }
-          { this.props.checkedF &&
-          <Grid item xs={6}>
-            <Paper className={classes.paper}>
-              <Stock />
-            </Paper>
-          </Grid>
+          {this.props.checkedF &&
+            <Grid item xs={6}>
+              <Paper className={classes.paper}>
+                <Stock />
+              </Paper>
+            </Grid>
           }
 
           {/* Fifth Row */}
           {this.props.checkedG &&
             <Grid item xs={3}>
-                <Paper
-                  className={classes.paper} >
-                  <CompleteCalc />
-                </Paper>
+              <Paper
+                className={classes.paper} >
+                <CompleteCalc />
+              </Paper>
             </Grid>
           }
-          { this.props.checkedH &&
-          <Grid item xs={5}>
-            <Paper className={classes.paper}>
-              <WeatherCard />
-            </Paper>
-          </Grid>
+          {this.props.checkedH &&
+            <Grid item xs={5}>
+              <Paper className={classes.paper}>
+                <WeatherCard />
+              </Paper>
+            </Grid>
           }
-          { this.props.checkedI &&
-          <Grid item xs={4}>
-            <Paper className={classes.paper}>
+          {this.props.checkedI &&
+            <Grid item xs={4}>
+              <Paper className={classes.paper}>
 
-            </Paper>
-          </Grid>
+              </Paper>
+            </Grid>
           }
         </Grid>
       </div>
