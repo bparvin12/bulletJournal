@@ -37,7 +37,8 @@ class DoughnutChart extends Component {
                             'rgba(128, 0, 128, 1)',
                             'rgba(128, 128, 128, 1)',
                             'rgba(255, 0, 0, 1)',
-                        ]
+                        ],
+                        width: '100%'
                     }
                 ] 
             }

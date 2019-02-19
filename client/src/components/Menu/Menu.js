@@ -20,6 +20,7 @@ import ListAltIcon from '@material-ui/icons/ListAlt'
 import EuroSymbolIcon from '@material-ui/icons/EuroSymbol'
 import IsoIcon from '@material-ui/icons/Iso'
 import WbSunnyIcon from '@material-ui/icons/WbSunny'
+import CalendarTodayIcon from '@material-ui/icons/CalendarToday'
 import Navbar from "../Navbar";
 import styles from "./Menu.styles";
 import AccountBalanceIcon from '@material-ui/icons/AccountBalance';
@@ -154,6 +155,16 @@ class Menu extends React.Component {
                 checked={this.props.checkedH}
                 onChange={this.props.onChange('checkedH')}
                 value="checkedH"
+              />
+            </ListItem>
+            {/* Calendar */}
+            <ListItem button key="Calendar">
+              <ListItemIcon><CalendarTodayIcon /></ListItemIcon>
+              <ListItemText>Calendar</ListItemText>
+              <Switch
+                checked={this.props.checkedI}
+                onChange={this.props.onChange('checkedI')}
+                value="checkedI"
               />
             </ListItem>
           </List>
