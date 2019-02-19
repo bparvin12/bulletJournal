@@ -19,6 +19,7 @@ import CompleteCalc from "../../components/Calculator/CompleteCalc.jsx";
 // import WeatherWidget from "../../components/WeatherWidget/WeatherCard"
 import WeatherCard from '../../components/WeatherWidget/WeatherCard';
 import Stock from "../../components/Stock/CompleteStock";
+import CompleteCalendar from "../../components/Calendar/CompleteCalendar";
 
 
 const styles = theme => ({
@@ -33,6 +34,7 @@ const styles = theme => ({
   paper: {
     height: 370,
     background: 'linear-gradient(45deg, #262b40 30%, #171a26 90%)',
+    // background: 'lightsilver',
     padding: theme.spacing.unit * 2,
     textAlign: 'center',
     justify: 'bottom',
@@ -155,7 +157,7 @@ class CenteredGrid extends React.Component {
           {this.props.checkedI &&
             <Grid item xs={4}>
               <Paper className={classes.paper}>
-
+                <CompleteCalendar />
               </Paper>
             </Grid>
           }

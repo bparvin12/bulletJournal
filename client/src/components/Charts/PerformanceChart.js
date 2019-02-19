@@ -38,7 +38,8 @@ class PerformanceChart extends Component {
                             'rgba(128, 128, 128, 1)',
                             'rgba(255, 0, 0, 1)',
                         ],
-                        borderWidth: 2          
+                        borderWidth: 2,
+                        textColor: 'white'          
                     }
                 ] 
             }

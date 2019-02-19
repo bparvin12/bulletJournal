@@ -37,7 +37,8 @@ class App extends Component {
     checkedE: true,
     checkedF: true,
     checkedG: true,
-    checkedH: true
+    checkedH: true,
+    checkedI: true,
   }
 
   handleChange = name => event => {
