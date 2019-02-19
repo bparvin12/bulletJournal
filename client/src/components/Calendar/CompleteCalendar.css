@@ -26,9 +26,9 @@
   --main-color: #1a8fff;
   --text-color: #777;
   --text-color-light: #ccc;
-  --border-color: #eee;
+  --border-color: white;
   --bg-color: #f9f9f9;
-  --neutral-color: #fff;
+  --neutral-color: rgb(110,110,100);
 }
 
 
