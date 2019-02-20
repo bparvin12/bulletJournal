@@ -1,12 +1,12 @@
 import React, { Component } from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Home from "./pages/Home";
-import Finance from "./pages/Finance";
+// import Finance from "./pages/Finance";
 import LoginVisual from "./pages/LoginVisual";
-import Goals from "./pages/Goals";
+// import Goals from "./pages/Goals";
 import Health from "./pages/Health";
-import CompleteChat from "./pages/Chat";
-import Login from "./pages/Login";
+// import CompleteChat from "./pages/Chat";
+// import Login from "./pages/Login";
 import SignIn from "./components/SignIn";
 import SignUp from "./components/SignUp";
 import Member from "./components/Member";
@@ -62,11 +62,11 @@ class App extends Component {
           <Switch>
             <Route exact path="/" component={LoginVisual} />
             <Route exact path="/home"  render={() => <Home {...this.state} />} />
-            <Route exact path="/finance" component={Finance} />
-            <Route exact path="/goals" component={Goals} />
+            {/* <Route exact path="/finance" component={Finance} /> */}
+            {/* <Route exact path="/goals" component={Goals} /> */}
             <Route exact path="/health" component={Health} />
-            <Route exact path="/chat" component={CompleteChat} />
-            <Route exact path="/login" component={Login} />
+            {/* <Route exact path="/chat" component={CompleteChat} /> */}
+            {/* <Route exact path="/login" component={Login} /> */}
             <Route exact path="/signin" component={SignIn} />
             <Route exact path="/signup" component={SignUp} />
             <Route exact path="/member" component={Member} />
