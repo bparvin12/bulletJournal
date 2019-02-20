@@ -27,19 +27,70 @@ class CalorieTracker extends Component {
         negativeCalories: ""
     };
 
-    // Add code here to get all books from the database and save them to this.state.books
+    // Add code here to get all recordedData from the database and save them to this.state.dailyCalorieCount
     componentDidMount = () => {
-        axios.get('/api/calorieTrackers').then(response => {
+        axios.get('/calorieTrackers/5c632d423145d8e69dd96f74').then(response => {
+            const recordedData = response.data;
             console.log(response);
+            console.log("recordedData: " + recordedData);
+            console.log("recordedData.length: " + recordedData.length);
             const arr = []
-            for (var i = 0; i < 7; i++) {
-                arr.push({
-                    date: moment().subtract('days', i),
-                    data: {
-                        positiveCalories: 'from server',
-                        negativeCalories: 'from server'
+            var dateContainedData = false;
+            var numberOfHistoricalDays = 14;
+            for (var i = 0; i < numberOfHistoricalDays; i++) {
+                const date = moment().subtract('days', i);
+                var m = moment(date,"YYYY-MM-DD");
+                var s = m.format("YYYY-MM-DD");
+                console.log("Checking for date: " + s);
+
+                //  loop through recordedData to find the first match for the given
+                //  historical day
+                for (var j = 0; j < recordedData.length; j++) {
+                    var t = moment(recordedData[j].date,"YYYY-MM-DD");
+                    var u = t.format("YYYY-MM-DD");
+                    console.log("recordedData[i].date: " + u);
+
+                    if(date.isSame(t, 'day')) {
+                        console.log("MATCH!!!!!! for " + u);
+                        var positiveCalories = 0;
+                        var negativeCalories = 0;
+                        if (typeof recordedData[j] !== 'undefined') {
+                            positiveCalories = recordedData[j].positiveCalories
+                        }
+                        if (typeof recordedData[j] !== 'undefined') {
+                            negativeCalories = recordedData[j].negativeCalories
+                        }
+                        arr.push({
+                            date, //
+                            positiveCalorieIntake: positiveCalories,
+                            negativeCalorieIntake: negativeCalories
+                        });
+                        dateContainedData = true;
+                        //  break out of loop to take only first occurrence of recorded data that matches the date
+                        break;
                     }
+                }
+                if(!dateContainedData) {
+                    arr.push({
+                        date, //
+                        positiveCalorieIntake: 0,
+                        negativeCalorieIntake: 0
+                    });
+                }
+                dateContainedData = false;
+                //TODO: loop through recordedData, and if month day and year are the same 
+            //     this.setState = (!moment(recordedData, 'MM-DD-YYYY').isSame()){  
+            //     then.append.arr};
+            // }
+                // (using moment to get month day and year) and then make that array item
+                // if found into the data part below
+                /*
+                arr.push({
+                    date, //
+                    positiveCalorieIntake: recordedData[i].positiveCalories,
+                    negativeCalorieIntake: recordedData[i].negativeCalories
                 });
+                */
             }
             // console.log(arr) ***replacing console log with setState
             this.setState({
@@ -144,7 +195,7 @@ class CalorieTracker extends Component {
                         <List>
                             {this.state.dailyCalorieCount.map((hotdog) => (
                                 <ListItem button key={"test"}>
-                                    <ListItemIcon> <TextFieldButton date={hotdog.date.format('MMMM Do YYYY')} /></ListItemIcon>
+                                    <ListItemIcon> <TextFieldButton date={hotdog.date.format('MMMM Do YYYY')} negativeCalorieIntake={hotdog.negativeCalorieIntake} positiveCalorieIntake={hotdog.positiveCalorieIntake} /></ListItemIcon>
                                     <ListItemText primary={hotdog.date.format('MMMM Do YYYY')} />
                                 </ListItem>
                             ))}
