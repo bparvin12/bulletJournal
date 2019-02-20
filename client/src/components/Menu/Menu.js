@@ -8,7 +8,7 @@ import CssBaseline from '@material-ui/core/CssBaseline';
 import Divider from '@material-ui/core/Divider';
 import IconButton from '@material-ui/core/IconButton';
 import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
-import ChevronRightIcon from '@material-ui/icons/ChevronRight';
+// import ChevronRightIcon from '@material-ui/icons/ChevronRight';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
@@ -23,14 +23,14 @@ import WbSunnyIcon from '@material-ui/icons/WbSunny'
 import CalendarTodayIcon from '@material-ui/icons/CalendarToday'
 import Navbar from "../Navbar";
 import styles from "./Menu.styles";
-import AccountBalanceIcon from '@material-ui/icons/AccountBalance';
-import FitnessCenterIcon from '@material-ui/icons/FitnessCenter';
-import AttachMoneyIcon from '@material-ui/icons/AttachMoney';
-import ListIcon from '@material-ui/icons/List';
+// import AccountBalanceIcon from '@material-ui/icons/AccountBalance';
+// import FitnessCenterIcon from '@material-ui/icons/FitnessCenter';
+// import AttachMoneyIcon from '@material-ui/icons/AttachMoney';
+// import ListIcon from '@material-ui/icons/List';
 import NotificationsIcon from '@material-ui/icons/Notifications';
-import AccountCircle from '@material-ui/icons/AccountCircle';
-import SchoolIcon from '@material-ui/icons/School';
-import HomeIcon from '@material-ui/icons/Home';
+// import AccountCircle from '@material-ui/icons/AccountCircle';
+// import SchoolIcon from '@material-ui/icons/School';
+// import HomeIcon from '@material-ui/icons/Home';
 import Switch from '@material-ui/core/Switch';
 
 

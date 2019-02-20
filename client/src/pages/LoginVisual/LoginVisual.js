@@ -1,17 +1,17 @@
 import React from "react";
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
 import styles from './LoginVisual.styles';
-import Button from '@material-ui/core/Button';
+// import Button from '@material-ui/core/Button';
 import "./styles.css";
-import dog from "./Images/BG1.jpg";
-import { signUp } from '../../actions';
+// import dog from "./Images/BG1.jpg";
+// import { signUp } from '../../actions';
 
 
 const LoginVisual = (props) => {
 
-    const { classes } = props;
+    // const { classes } = props;
 
     const goToSignIn = () => {
       window.location.href = "/signin"

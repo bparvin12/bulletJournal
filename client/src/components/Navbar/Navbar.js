@@ -21,12 +21,12 @@ import classNames from 'classnames';
 import { Link } from 'react-router-dom';
 import WeatherWidget from "../WeatherWidget";
 // import { Link as RouterLink } from 'react-router-dom'
-import { Modal } from '@material-ui/core';
+// import { Modal } from '@material-ui/core';
 // import Link from '@material-ui/core/Link';
 import SimpleModalWrapped from "../Modal";
-import { connect } from 'react-redux';
+// import { connect } from 'react-redux';
 // import { signOut } from '../../actions';
-import * as actions from '../../actions';
+// import * as actions from '../../actions';
 
 
 class Navbar extends React.Component {
