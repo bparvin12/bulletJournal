@@ -45,6 +45,7 @@ class LineChart extends Component {
                         pointBorderWidth: 5,
                         lineTension: .5,
                         textColor: 'white',
+                        width: '100%'
                     }
                 ] 
             }

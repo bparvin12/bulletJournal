@@ -19,6 +19,7 @@ import CompleteCalc from "../../components/Calculator/CompleteCalc.jsx";
 // import WeatherWidget from "../../components/WeatherWidget/WeatherCard"
 import WeatherCard from '../../components/WeatherWidget/WeatherCard';
 import Stock from "../../components/Stock/CompleteStock";
+import CompleteCalendar from "../../components/Calendar/CompleteCalendar";
 
 
 const styles = theme => ({
@@ -31,8 +32,9 @@ const styles = theme => ({
     height: 'auto',
   },
   paper: {
-    height:370,
+    height: 370,
     background: 'linear-gradient(45deg, #262b40 30%, #171a26 90%)',
+    // background: 'lightsilver',
     padding: theme.spacing.unit * 2,
     textAlign: 'center',
     justify: 'bottom',
@@ -48,20 +50,24 @@ const styles = theme => ({
   },
 });
 
-function CenteredGrid(props) {
-  const { classes } = props;
+class CenteredGrid extends React.Component {
 
-  return (
-    <div className={classes.root}>
+  render() {
+    const { classes } = this.props;
 
-      {/* Top Row With the Notification Cards */}
-      <Grid
-        container
-        direction="row"
-        justify="center"
-        alignItems="center"
-        spacing={24} >
-        {/* <Grid item xs={3}>
+    console.log(this.props.checkedG)
+
+    return (
+      <div className={classes.root}>
+
+        {/* Top Row With the Notification Cards */}
+        <Grid
+          container
+          direction="row"
+          justify="center"
+          alignItems="center"
+          spacing={24} >
+          {/* <Grid item xs={3}>
           <Card className={classes.card}>News Headlines</Card>
         </Grid>
         <Grid item xs={3}>
@@ -74,71 +80,91 @@ function CenteredGrid(props) {
           <Card className={classes.card}><Chat /></Card>
         </Grid> */}
 
-        {/* Second Row With the Performance Chart Grid Tile*/}
-        <Grid item xs={12} >
-          <Paper className={classes.paper}>
-            <Typography className={classes.title} variant="h4" align="left" color='textPrimary' noWrap>
-              <Link className='performance-link' to='../Goals/Goals.js'>Performance:</Link>
-            </Typography>
-            <PerformanceChart height="360" />
-          </Paper>
-        </Grid>
+          {/* Second Row With the Performance Chart Grid Tile*/}
+          {this.props.checkedA &&
+            <Grid item xs={12} >
+              <Paper className={classes.paper}>
+                <Typography className={classes.title} variant="h4" align="left" color='textPrimary' noWrap>
+                  <Link className='performance-link' to='../Goals/Goals.js'>Performance:</Link>
+                </Typography>
+                <PerformanceChart height="360" />
+              </Paper>
+            </Grid>
+          }
 
-        {/* Third Row With the three Grid Tiles: Task Chart, Goals, Budget */}
-        <Grid item xs={4}>
-          <Paper className={classes.paper}>
-            <Typography className={classes.title} variant="h4" align="left" color='primary' noWrap>
-              <Link className='todolist-link' to='../Todos/Todos.js'>Task Completion:</Link>
-            </Typography>
-            <LineChart height="360" />
-          </Paper>
-        </Grid>
-        <Grid item xs={4}>
-          <Paper className={classes.paper}>
-            <Typography className={classes.title} variant="h4" align="left" color='primary' noWrap>
-              <Link className='health-link' to='../Health/Health.js'>Health Stats:</Link>
-            </Typography>
-            <BarChart height="340" />
-          </Paper>
-        </Grid>
-        <Grid item xs={4}>
-          <Paper className={classes.paper}>
-            <Typography className={classes.title} variant="h4" align="left" color='primary' noWrap>
-              <Link className='finance-link' to='../Finance/Finance.js'>Budget:</Link>
-            </Typography>
-            <FinanceWidget />
-          </Paper>
-        </Grid>
+          {/* Third Row With the three Grid Tiles: Task Chart, Goals, Budget */}
+          {this.props.checkedB &&
+            <Grid item xs={4}>
+              <Paper className={classes.paper}>
+                <Typography className={classes.title} variant="h4" align="left" color='primary' noWrap>
+                  <Link className='todolist-link' to='../Todos/Todos.js'>Task Completion:</Link>
+                </Typography>
+                <LineChart height="360" />
+              </Paper>
+            </Grid>
+          }
+          {this.props.checkedC &&
+            <Grid item xs={4}>
+              <Paper className={classes.paper}>
+                <Typography className={classes.title} variant="h4" align="left" color='primary' noWrap>
+                  <Link className='health-link' to='../Health/Health.js'>Health Stats:</Link>
+                </Typography>
+                <BarChart height="340" />
+              </Paper>
+            </Grid>
+          }
+          {this.props.checkedD &&
+            <Grid item xs={4}>
+              <Paper className={classes.paper}>
+                <Typography className={classes.title} variant="h4" align="left" color='primary' noWrap>
+                  <Link className='finance-link' to='../Finance/Finance.js'>Budget:</Link>
+                </Typography>
+                <FinanceWidget />
+              </Paper>
+            </Grid>
+          }
 
-        {/* Fourth Row With the two Grid Tiles: To do list, MISC List */}
-        <Grid item xs={6}>
-          <Paper className={classes.paper}><TodosWidget /></Paper>
-        </Grid>
-        <Grid item xs={6}>
-          <Paper className={classes.paper}>
-            <Stock />
-          </Paper>
-        </Grid>
+          {/* Fourth Row With the two Grid Tiles: To do list, MISC List */}
+          {this.props.checkedE &&
+            <Grid item xs={6}>
+              <Paper className={classes.paper}><TodosWidget /></Paper>
+            </Grid>
+          }
+          {this.props.checkedF &&
+            <Grid item xs={6}>
+              <Paper className={classes.paper}>
+                <Stock />
+              </Paper>
+            </Grid>
+          }
 
-        {/* Fifth Row */}
-        <Grid item xs={3}>
-          <Paper className={classes.paper}>
-            <CompleteCalc />
-          </Paper>
+          {/* Fifth Row */}
+          {this.props.checkedG &&
+            <Grid item xs={3}>
+              <Paper
+                className={classes.paper} >
+                <CompleteCalc />
+              </Paper>
+            </Grid>
+          }
+          {this.props.checkedH &&
+            <Grid item xs={5}>
+              <Paper className={classes.paper}>
+                <WeatherCard />
+              </Paper>
+            </Grid>
+          }
+          {this.props.checkedI &&
+            <Grid item xs={4}>
+              <Paper className={classes.paper}>
+                <CompleteCalendar />
+              </Paper>
+            </Grid>
+          }
         </Grid>
-        <Grid item xs={5}>
-          <Paper className={classes.paper}>
-            <WeatherCard />
-          </Paper>
-        </Grid>
-        <Grid item xs={4}>
-          <Paper className={classes.paper}>
-
-          </Paper>
-        </Grid>
-      </Grid>
-    </div>
-  );
+      </div>
+    );
+  }
 }
 
 CenteredGrid.propTypes = {
