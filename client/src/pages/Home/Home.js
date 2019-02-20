@@ -5,7 +5,7 @@ import Paper from '@material-ui/core/Paper';
 import Grid from '@material-ui/core/Grid';
 import FinanceWidget from '../../widgets/Finance';
 // import GoalsWidget from '../../widgets/Goals';
-import TodosWidget from '../../widgets/Todos';
+// import TodosWidget from '../../widgets/Todos';
 // import Weather from "../../widgets/Weather";
 import BarChart from "../../components/Charts/BarChart";
 import LineChart from "../../components/Charts/LineChart";
@@ -127,7 +127,9 @@ class CenteredGrid extends React.Component {
           {/* Fourth Row With the two Grid Tiles: To do list, MISC List */}
           {this.props.checkedE &&
             <Grid item xs={6}>
-              <Paper className={classes.paper}><TodosWidget /></Paper>
+              <Paper className={classes.paper}>
+                {/* <TodosWidget /> */}
+              </Paper>
             </Grid>
           }
           {this.props.checkedF &&
