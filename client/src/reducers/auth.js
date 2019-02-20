@@ -21,5 +21,5 @@ export default (state = DEFAULT_STATE, action) => {
         return state;
         
     }
-    return state;
+    // return state;
 }

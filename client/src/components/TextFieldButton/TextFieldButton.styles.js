@@ -1,24 +1,24 @@
-import { fade } from '@material-ui/core/styles/colorManipulator';
-import { Link } from '@material-ui/core';
+// import { fade } from '@material-ui/core/styles/colorManipulator';
+// import { Link } from '@material-ui/core';
 
-const currencies = [
-  {
-    value: 'USD',
-    label: '$',
-  },
-  {
-    value: 'EUR',
-    label: '€',
-  },
-  {
-    value: 'BTC',
-    label: '฿',
-  },
-  {
-    value: 'JPY',
-    label: '¥',
-  },
-];
+// const currencies = [
+//   {
+//     value: 'USD',
+//     label: '$',
+//   },
+//   {
+//     value: 'EUR',
+//     label: '€',
+//   },
+//   {
+//     value: 'BTC',
+//     label: '฿',
+//   },
+//   {
+//     value: 'JPY',
+//     label: '¥',
+//   },
+// ];
 
 export default theme => ({
   container: {

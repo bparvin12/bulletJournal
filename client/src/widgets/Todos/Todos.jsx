@@ -37,7 +37,7 @@ class Todos extends React.Component {
             "priority": "3",
             "date": "2018-02-08",
             "time": "00:00",
-            "status": "completed"
+            "status": "pending"
         },
         {
             "_id": ("5c5dc3761c1ac8fcfd8a69ea"),
@@ -46,7 +46,14 @@ class Todos extends React.Component {
             "date": "2018-02-08",
             "time": "00:00",
             "status": "started"
-        }
+        }, {
+            "_id": ("5c5dc3761c1ac8fcfd8a69ea"),
+            "task": "connect database",
+            "priority": "3",
+            "date": "2018-02-08",
+            "time": "00:00",
+            "status": "started"
+        },
     ];
 
 

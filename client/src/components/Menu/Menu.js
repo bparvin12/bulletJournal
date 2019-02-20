@@ -8,7 +8,7 @@ import CssBaseline from '@material-ui/core/CssBaseline';
 import Divider from '@material-ui/core/Divider';
 import IconButton from '@material-ui/core/IconButton';
 import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
-import ChevronRightIcon from '@material-ui/icons/ChevronRight';
+// import ChevronRightIcon from '@material-ui/icons/ChevronRight';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
@@ -20,30 +20,23 @@ import ListAltIcon from '@material-ui/icons/ListAlt'
 import EuroSymbolIcon from '@material-ui/icons/EuroSymbol'
 import IsoIcon from '@material-ui/icons/Iso'
 import WbSunnyIcon from '@material-ui/icons/WbSunny'
+import CalendarTodayIcon from '@material-ui/icons/CalendarToday'
 import Navbar from "../Navbar";
 import styles from "./Menu.styles";
-import AccountBalanceIcon from '@material-ui/icons/AccountBalance';
-import FitnessCenterIcon from '@material-ui/icons/FitnessCenter';
-import AttachMoneyIcon from '@material-ui/icons/AttachMoney';
-import ListIcon from '@material-ui/icons/List';
+// import AccountBalanceIcon from '@material-ui/icons/AccountBalance';
+// import FitnessCenterIcon from '@material-ui/icons/FitnessCenter';
+// import AttachMoneyIcon from '@material-ui/icons/AttachMoney';
+// import ListIcon from '@material-ui/icons/List';
 import NotificationsIcon from '@material-ui/icons/Notifications';
-import AccountCircle from '@material-ui/icons/AccountCircle';
-import SchoolIcon from '@material-ui/icons/School';
-import HomeIcon from '@material-ui/icons/Home';
+// import AccountCircle from '@material-ui/icons/AccountCircle';
+// import SchoolIcon from '@material-ui/icons/School';
+// import HomeIcon from '@material-ui/icons/Home';
 import Switch from '@material-ui/core/Switch';
 
 
 class Menu extends React.Component {
   state = {
     open: false,
-    checkedA: true,
-    checkedB: true,
-    checkedC: true,
-    checkedD: true,
-    checkedE: true,
-    checkedF: true,
-    checkedG: true,
-    checkedH: true
   };
 
   handleDrawerOpen = () => {
@@ -54,11 +47,9 @@ class Menu extends React.Component {
     this.setState({ open: false });
   };
 
-  handleChange = name => event => {
-    this.setState({ [name]: event.target.checked });
-  };
   render() {
     const { classes, theme } = this.props;
+    console.log(this.props)
 
     return (
       <div className={classes.root}>
@@ -87,83 +78,93 @@ class Menu extends React.Component {
           <Divider />
           <List>
             {/* performance */}
-            <ListItem button >
+            <ListItem button key="performance" >
               <ListItemIcon><TrendingUpIcon /></ListItemIcon>
               <ListItemText>Performance</ListItemText>
               <Switch
-                checked={this.state.checkedA}
-                onChange={this.handleChange('checkedA')}
+                checked={this.props.checkedA}
+                onChange={this.props.onChange('checkedA')}
                 value="checkedA"
               />
             </ListItem>
             {/* task completion */}
-            <ListItem button >
+            <ListItem button key="taskcompletion">
               <ListItemIcon><CheckBoxIcon /></ListItemIcon>
               <ListItemText>Task Completion</ListItemText>
               <Switch
-                checked={this.state.checkedB}
-                onChange={this.handleChange('checkedB')}
+                checked={this.props.checkedB}
+                onChange={this.props.onChange('checkedB')}
                 value="checkedB"
               />
             </ListItem>
             {/* Health Stats */}
-            <ListItem button >
+            <ListItem button key="healthstats">
               <ListItemIcon><AccessibilityNewIcon /></ListItemIcon>
               <ListItemText>Health Stats</ListItemText>
               <Switch
-                checked={this.state.checkedC}
-                onChange={this.handleChange('checkedC')}
+                checked={this.props.checkedC}
+                onChange={this.props.onChange('checkedC')}
                 value="checkedC"
               />
             </ListItem>
             {/* Budget */}
-            <ListItem button >
+            <ListItem button key="budget">
               <ListItemIcon><MonetizationOnIcon /></ListItemIcon>
               <ListItemText>Budget</ListItemText>
               <Switch
-                checked={this.state.checkedD}
-                onChange={this.handleChange('checkedD')}
+                checked={this.props.checkedD}
+                onChange={this.props.onChange('checkedD')}
                 value="checkedD"
               />
             </ListItem>
             {/* Todo's */}
-            <ListItem button >
+            <ListItem button key="todos">
               <ListItemIcon><ListAltIcon /></ListItemIcon>
               <ListItemText>Todos</ListItemText>
               <Switch
-                checked={this.state.checkedE}
-                onChange={this.handleChange('checkedE')}
+                checked={this.props.checkedE}
+                onChange={this.props.onChange('checkedE')}
                 value="checkedE"
               />
             </ListItem>
             {/* CryptoCurrency */}
-            <ListItem button >
+            <ListItem button key="cryptocurrency">
               <ListItemIcon><EuroSymbolIcon /></ListItemIcon>
               <ListItemText>CryptoCurrency</ListItemText>
               <Switch
-                checked={this.state.checkedF}
-                onChange={this.handleChange('checkedF')}
+                checked={this.props.checkedF}
+                onChange={this.props.onChange('checkedF')}
                 value="checkedF"
               />
             </ListItem>
              {/* Calculator */}
-             <ListItem button >
+             <ListItem button key="calculator">
               <ListItemIcon><IsoIcon /></ListItemIcon>
               <ListItemText>Calculator</ListItemText>
               <Switch
-                checked={this.state.checkedG}
-                onChange={this.handleChange('checkedG')}
+                checked={this.props.checkedG}
+                onChange={this.props.onChange('checkedG')}
                 value="checkedG"
               />
             </ListItem>
             {/* Weather */}
-            <ListItem button >
+            <ListItem button key="weather">
               <ListItemIcon><WbSunnyIcon /></ListItemIcon>
               <ListItemText>Weather</ListItemText>
               <Switch
-                checked={this.state.checkedH}
-                onChange={this.handleChange('checkedH')}
+                checked={this.props.checkedH}
+                onChange={this.props.onChange('checkedH')}
                 value="checkedH"
+              />
+            </ListItem>
+            {/* Calendar */}
+            <ListItem button key="Calendar">
+              <ListItemIcon><CalendarTodayIcon /></ListItemIcon>
+              <ListItemText>Calendar</ListItemText>
+              <Switch
+                checked={this.props.checkedI}
+                onChange={this.props.onChange('checkedI')}
+                value="checkedI"
               />
             </ListItem>
           </List>

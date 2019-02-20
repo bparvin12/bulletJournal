@@ -34,7 +34,7 @@ const chartData = {
 };
 
 const Finance = (props) => {
-    const { classes } = props;
+    // const { classes } = props;
     return (
         <div>
             <PieChart chartData={chartData} width={50} height={200} />

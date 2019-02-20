@@ -8,7 +8,7 @@ import ListItem from '@material-ui/core/ListItem';
 import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
 import List from '@material-ui/core/List';
-import Card from '@material-ui/core/Card';
+// import Card from '@material-ui/core/Card';
 import BarChart from "../../components/Charts/BarChart";
 import Paper from '@material-ui/core/Paper';
 import Grid from '@material-ui/core/Grid';
@@ -16,7 +16,7 @@ import Typography from '@material-ui/core/Typography';
 import LineChart from '../../components/Charts/LineChart';
 import { Link } from 'react-router-dom';
 import axios from "axios";
-import createBreakpoints from "@material-ui/core/styles/createBreakpoints";
+// import createBreakpoints from "@material-ui/core/styles/createBreakpoints";
 
 
 class CalorieTracker extends Component {

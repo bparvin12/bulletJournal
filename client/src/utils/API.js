@@ -6,7 +6,7 @@ export default {
       return axios.get("/api/calorieTrackers");
     },
     // Gets the calorie tracker inputs with the given id
-    getCalorieTracker: function(id) {
+    getCalorieTrackerById: function(id) {
       return axios.get("/api/calorieTrackers/" + id);
     },
     // Deletes the calorie tracker inputs with the given id
