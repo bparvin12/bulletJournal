@@ -36,7 +36,7 @@ class CalorieTracker extends Component {
             console.log("recordedData.length: " + recordedData.length);
             const arr = []
             var dateContainedData = false;
-            var numberOfHistoricalDays = 14;
+            var numberOfHistoricalDays = 7;
             for (var i = 0; i < numberOfHistoricalDays; i++) {
                 const date = moment().subtract('days', i);
                 var m = moment(date,"YYYY-MM-DD");
