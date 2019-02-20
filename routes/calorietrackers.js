@@ -10,9 +10,9 @@ router.get("/:userID", (req, res) => {
         userID: req.params.userID, 
         date: {
             $gte : new Date('2019-02-05'),
-            $lte : new Date('2019-02-13')
+            $lte : new Date('2019-02-19')
         }
-    })
+    }).sort({date: -1})
         .then(result => res.json(result),
             err => res.json({ err }))
 });

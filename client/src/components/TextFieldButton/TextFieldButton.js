@@ -9,34 +9,28 @@ import SaveIcon from '@material-ui/icons/Save';
 
 class TextFieldButton extends React.Component {
   state = {
-    positiveCalorieIntake: 'How many calories?',
-    negativeCalorieIntake: '',
+    positiveCalorieIntake: this.props.positiveCalorieIntake || 'How many calories?',
+    negativeCalorieIntake: this.props.negativeCalorieIntake || '',
   };
 
-  handleChange = positiveCalorieIntake => event => {
+  handleChange = hotdog => event => {
     this.setState({
-      [positiveCalorieIntake]: event.target.value,
-    });
-  };
-
-  handleChange = negativeCalorieIntake => event => {
-    this.setState({
-      [negativeCalorieIntake]: event.target.value,
+      [hotdog]: event.target.value, //"hot dog" from line #16 takes in the value & places it into te [] square brackets & changes that value to a key value" (ie. could take in postive & negative calorie values from buttons below)
     });
   };
 
 
-  // handlePositiveIntakeChange = event => {
-  //   this.setState({
-  //     positiveIntake: event.target.value
-  //   })
-  // }
+  handlePositiveIntakeChange = event => {
+    this.setState({
+      positiveIntake: event.target.value
+    })
+  }
 
-  // handleNegativeIntakeChange = event => {
-  //   this.setState({
-  //     negativeIntake: event.target.value
-  //   })
-  // }
+  handleNegativeIntakeChange = event => {
+    this.setState({
+      negativeIntake: event.target.value
+    })
+  }
 
   render() {
     const { classes } = this.props;
@@ -49,7 +43,7 @@ class TextFieldButton extends React.Component {
           label="(Positive-Intake)" 
           className={classes.textField}
           value={this.state.positiveCalorieIntake}
-          onChange={this.handleChange('positiveCalorieIntake')}
+          onChange={this.handlePositiveIntakeChange}
           margin="normal"
           variant="outlined"
         />
