@@ -24,6 +24,10 @@ class SignIn extends Component {
         }
     }
 
+    goHome() {
+        window.location.href = "/home"
+    }
+
     render() {
         const { handleSubmit } = this.props;
         return (
@@ -57,7 +61,7 @@ class SignIn extends Component {
                             {this.props.errorMessage}
                         </div> : null}
 
-                    <button type="submit" className="style-button" >Sign In
+                    <button type="submit" className="style-button" onClick={this.goHome}>Sign In
                 {/* <span class="MuiButton-label-429">Sign In</span>
                 <span class="MuiTouchRipple-root-312"></span> */}
 
