@@ -29,7 +29,7 @@ class SignUp extends Component {
     render() {
         const { handleSubmit } = this.props;
         return (
-            <div className="container" align='center'>
+            <div className="container Menu-root-1" align='center'>
                 <h1 >Q</h1>
                 <h2 >the Butler</h2>
                 <form onSubmit={handleSubmit(this.onSubmit)}>

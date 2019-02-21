@@ -60,6 +60,8 @@ class App extends Component {
       <Router>
           <Switch>
             <Route exact path="/" component={LoginVisual} />
+              <Route exact path="/signin" component={SignIn} />
+              <Route exact path="/signup" component={SignUp} />
             <Menu {...this.state} onChange={this.handleChange}>
               <Route exact path="/home"  render={() => <Home {...this.state} />} />
               {/* <Route exact path="/finance" component={Finance} /> */}
@@ -67,8 +69,6 @@ class App extends Component {
               <Route exact path="/health" component={Health} />
               {/* <Route exact path="/chat" component={CompleteChat} /> */}
               {/* <Route exact path="/login" component={Login} /> */}
-              <Route exact path="/signin" component={SignIn} />
-              <Route exact path="/signup" component={SignUp} />
               <Route exact path="/member" component={Member} />
               <Route component={Error} />
             </Menu>
