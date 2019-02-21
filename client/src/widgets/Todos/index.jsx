@@ -1,1 +1,1 @@
-export { default } from "./Todos.jsx";
+export { default } from "./Todos";

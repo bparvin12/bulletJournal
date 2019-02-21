@@ -6,9 +6,6 @@ import { compose } from 'redux';
 import * as actions from '../actions';
 
 
-import LoginInput from './Inputs/LoginInput';
-import { isThursdayWithOptions } from 'date-fns/esm/fp';
-
 class SignUp extends Component {
     constructor(props){
         super(props);
@@ -28,31 +25,37 @@ class SignUp extends Component {
 render() {
     const { handleSubmit } = this.props;
     return (
-        <div>
+        <div className="container" align='center'>
+            <h1 >Q</h1>
+            <h2 >the Butler</h2>
             <form onSubmit={handleSubmit(this.onSubmit)}>
 
-            <fieldset>
-                <Field
-                    name="email"
-                    type="text"
-                    id="email"
-                    component='input' />
-            </fieldset> 
+                <fieldset>
+                    <Field
+                        className="style-button"
+                        placeholder="enter e-mail"
+                        name="email"
+                        type="text"
+                        id="email"
+                        component='input' />
+                </fieldset>
 
-            <fieldset>
-                 <Field
-                    name="password"
-                    type="password"
-                    id="password"
-                    component='input' />   
-            </fieldset>
+                <fieldset>
+                    <Field
+                        className="style-button"
+                        placeholder="enter password"
+                        name="password"
+                        type="password"
+                        id="password"
+                        component='input' />
+                </fieldset>
 
             { this.props.errorMessage ?
                 <div>
                     { this.props.errorMessage }
                 </div>  : null }
 
-            <button type="submit">Sign Up
+            <button className="style-button" type="submit">Sign Up
                 {/* <span class="MuiButton-label-429">Sign Up</span>
                 <span class="MuiTouchRipple-root-312"></span> */}
                 

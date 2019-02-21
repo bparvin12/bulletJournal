@@ -8,6 +8,16 @@ import ListItem from '@material-ui/core/ListItem';
 import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
 import List from '@material-ui/core/List';
+import Card from '@material-ui/core/Card';
+import BarChart from "../../components/Charts/BarChart";
+import Paper from '@material-ui/core/Paper';
+import Grid from '@material-ui/core/Grid';
+import Typography from '@material-ui/core/Typography';
+import LineChart from '../../components/Charts/LineChart';
+import { Link } from 'react-router-dom';
+import axios from "axios";
+import createBreakpoints from "@material-ui/core/styles/createBreakpoints";
+
 
 class CalorieTracker extends Component {
     // Initialize this.state.Health as an empty array
@@ -17,19 +27,45 @@ class CalorieTracker extends Component {
         negativeCalories: ""
     };
 
-    componentDidMount() {
-        const arr = []
-        for (var i = 0; i < 7; i++) {
-            arr.push({
-                date: moment().subtract('days', i)
+    // Add code here to get all books from the database and save them to this.state.books
+    componentDidMount = () => {
+        axios.get('/api/calorieTrackers').then(response => {
+            console.log(response);
+            const arr = []
+            for (var i = 0; i < 7; i++) {
+                arr.push({
+                    date: moment().subtract('days', i),
+                    data: {
+                        positiveCalories: 'from server',
+                        negativeCalories: 'from server'
+                    }
+                });
+            }
+            // console.log(arr) ***replacing console log with setState
+            this.setState({
+                dailyCalorieCount: arr
+                // ***setting the variable "dailyCalorieCount" to the array
             });
-        }
-        // console.log(arr) ***replacing console log with setState
-        this.setState({
-            dailyCalorieCount:arr 
-            // ***setting the variable "dailyCalorieCount" to the array
-          });
+        })
     }
+
+    // componentDidMount() {
+    //     const arr = []
+    //     for (var i = 0; i < 7; i++) {
+    //         arr.push({
+    //             date: moment().subtract('days', i),
+    //             data: {
+    //                 positiveCalories: 'from server',
+    //                 negativeCalories: 'from server'
+    //             }
+    //         });
+    //     }
+    //     // console.log(arr) ***replacing console log with setState
+    //     this.setState({
+    //         dailyCalorieCount: arr
+    //         // ***setting the variable "dailyCalorieCount" to the array
+    //     });
+    // }
 
     // handle any changes to the input fields
     handleInputChange = event => {
@@ -78,20 +114,47 @@ class CalorieTracker extends Component {
     render() {
         const { classes } = this.props;
         return (
-            <div>
-                <h3 className={classes.input}>THIS IS 7 DAYS OF HEALTH!!</h3>
-                <List>
-                    {['Day 1', 'Day 2', 'Day 3', 'Day4', 'Day 5', 'Day 6', 'Day'].map((text, index) => (
-                        <ListItem button key={text}>
-                            <ListItemIcon>{index % 7 === 0 ? <TextFieldButton /> : <TextFieldButton />}</ListItemIcon>
-                            <ListItemText primary={text} />
-                        </ListItem>
-                    ))}
-                </List>
-            </div>
-        );
-    }
-}
 
+            <Grid container
+                direction="row"
+                justify="right"
+                alignItems="right"
+                spacing={24} >
+         
+                    <Grid item xs={6}>
+                        <Paper className={classes.paper}>
+                            <h3 className={classes.input} aligh='center'>Monthly Progress</h3>
+                            <Typography className={classes.title} variant="h4" align="left" color='primary' noWrap>
+                                <Link className='health-link' to='../Health/Health.js'>Health Stats:</Link>
+                            </Typography>
+                            <BarChart height="340" />
+                        </Paper>
+                    </Grid>
 
+                    <Grid item xs={6}>
+                        <Paper className={classes.paper}>
+                            <h3 className={classes.input} aligh='center'>Health Goals - Annual Progress</h3>
+                            <Typography className={classes.title} variant="h4" align="left" color='primary' noWrap>
+                                <Link className='health-link' to='../Health/Health.js'>Health Stats:</Link>
+                            </Typography>
+                            <LineChart height="340" />
+                        </Paper>
+                    </Grid>
+                    <Grid item xs={6} alignItems="right" >
+                        <List>
+                            {this.state.dailyCalorieCount.map((hotdog) => (
+                                <ListItem button key={"test"}>
+                                    <ListItemIcon> <TextFieldButton date={hotdog.date.format('MMMM Do YYYY')} /></ListItemIcon>
+                                    <ListItemText primary={hotdog.date.format('MMMM Do YYYY')} />
+                                </ListItem>
+                            ))}
+                        </List>
+                    </Grid>
+
+                </Grid>
+                );
+            }
+        }
+        
+        
 export default withStyles(styles)(CalorieTracker);
