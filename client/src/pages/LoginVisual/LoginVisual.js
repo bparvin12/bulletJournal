@@ -24,7 +24,7 @@ const LoginVisual = (props) => {
 
     return (
         // <div className="container">
-        <div className="container">
+        <div className="container Menu-root-1">
             {/* <h1>Q</h1> */}
             {/* <h1 className="flip-horizontal-fwd">Q</h1> */}
             <h1 className="bounce-in-top">Q</h1>
@@ -34,13 +34,13 @@ const LoginVisual = (props) => {
             {/* <input placeholder="e-mail" className="style-input"></input>
             <input placeholder="Password" className="style-input"></input> */}
             <p>
-            <button className="style-button" onClick={goToSignIn}>Sign In
+            <button className="style-button fade-in" onClick={goToSignIn}>Sign In
             {/* <Link className='nav-link' to='/signIn'>Sign In</Link> */}
            </button>
            </p>
 
            <p>
-            <button className="style-button" onClick={goToSignUp}> Register
+            <button className="style-button fade-in" onClick={goToSignUp}> Register
             {/* <Link className='nav-link' to='/signUp'>Register</Link> */}
            </button>
            </p>

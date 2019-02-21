@@ -58,21 +58,21 @@ class App extends Component {
 
     <MuiThemeProvider theme={theme}>
       <Router>
-        <Menu {...this.state} onChange={this.handleChange}>
           <Switch>
             <Route exact path="/" component={LoginVisual} />
-            <Route exact path="/home"  render={() => <Home {...this.state} />} />
-            {/* <Route exact path="/finance" component={Finance} /> */}
-            {/* <Route exact path="/goals" component={Goals} /> */}
-            <Route exact path="/health" component={Health} />
-            {/* <Route exact path="/chat" component={CompleteChat} /> */}
-            {/* <Route exact path="/login" component={Login} /> */}
-            <Route exact path="/signin" component={SignIn} />
-            <Route exact path="/signup" component={SignUp} />
-            <Route exact path="/member" component={Member} />
-            <Route component={Error} />
+              <Route exact path="/signin" component={SignIn} />
+              <Route exact path="/signup" component={SignUp} />
+            <Menu {...this.state} onChange={this.handleChange}>
+              <Route exact path="/home"  render={() => <Home {...this.state} />} />
+              {/* <Route exact path="/finance" component={Finance} /> */}
+              {/* <Route exact path="/goals" component={Goals} /> */}
+              <Route exact path="/health" component={Health} />
+              {/* <Route exact path="/chat" component={CompleteChat} /> */}
+              {/* <Route exact path="/login" component={Login} /> */}
+              <Route exact path="/member" component={Member} />
+              <Route component={Error} />
+            </Menu>
           </Switch>
-        </Menu>
       </Router>
     </MuiThemeProvider>
   </Provider>
